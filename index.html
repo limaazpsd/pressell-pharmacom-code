@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Pharmacom Labs Brasil | Site Oficial Pharmacom & Autenticidade</title>
@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://pharmacomlabs-site.com/">
 
-  <!-- Open Graph / Facebook / WhatsApp -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pharmacomlabs-site.com/">
   <meta property="og:title" content="Pharmacom Labs Brasil | Site Oficial Pharmacom">
@@ -28,17 +28,16 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="alternate icon" type="image/png" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
 
-  <!-- Preloads Críticos -->
+  <!-- Preloads -->
   <link rel="preload" as="image" href="phcpopup/images/eu_banner.gif" fetchpriority="high">
+  <link rel="preload" as="image" href="phcpopup/images/close4.png">
   <link rel="preload" as="image" href="bg-pharmacom.png">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Google Analytics & Google Ads Tags -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVRQMSQHG"></script>
@@ -51,7 +50,7 @@
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18258552622"></script>
 
-  <!-- Schema.org JSON-LD Institucional + FAQPage com Palavras-Chave Estratégicas -->
+  <!-- Schema.org JSON-LD para Indexação do Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,23 +64,14 @@
         "logo": "https://pharmacomlabs-site.com/favicon.svg",
         "image": "https://pharmacomlabs-site.com/bg-pharmacom.png",
         "description": "Portal informativo institucional Pharmacom Labs Brasil. Autenticidade, tecnologia farmacêutica e orientações sobre onde comprar Pharmacom original.",
-        "sameAs": [
-          "https://pharmacomoficial.com/"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "availableLanguage": ["Portuguese", "English", "Spanish"]
-        }
+        "sameAs": ["https://pharmacomoficial.com/"]
       },
       {
         "@type": "WebSite",
         "@id": "https://pharmacomlabs-site.com/#website",
         "url": "https://pharmacomlabs-site.com/",
         "name": "Site Oficial Pharmacom Brasil",
-        "publisher": {
-          "@id": "https://pharmacomlabs-site.com/#organization"
-        },
+        "publisher": { "@id": "https://pharmacomlabs-site.com/#organization" },
         "inLanguage": "pt-BR"
       },
       {
@@ -114,30 +104,20 @@
           {
             "@type": "SiteNavigationElement",
             "position": 1,
-            "name": "Verificar Código de Autenticidade",
-            "description": "Consulte o código holográfico raspável do seu lote Pharmacom Labs oficial.",
-            "url": "https://pharmacomlabs-site.com/verificacao-de-autenticidade.html"
+            "name": "Code Site",
+            "url": "https://pharmacomlabs-site.com/code"
           },
           {
             "@type": "SiteNavigationElement",
             "position": 2,
-            "name": "Onde Comprar Pharmacom & FAQ",
-            "description": "Perguntas frequentes sobre procedência, lotes e canal oficial Pharmacom Brasil.",
-            "url": "https://pharmacomlabs-site.com/faq.html"
+            "name": "Product",
+            "url": "https://pharmacomlabs-site.com/product"
           },
           {
             "@type": "SiteNavigationElement",
             "position": 3,
-            "name": "Controle de Qualidade & Pureza HPLC",
-            "description": "Padrões laboratoriais com pureza superior a 98,5% e filtragem cerâmica dupla.",
-            "url": "https://pharmacomlabs-site.com/controle-de-qualidade.html"
-          },
-          {
-            "@type": "SiteNavigationElement",
-            "position": 4,
-            "name": "Sobre a Pharmacom Labs",
-            "description": "História, inovação científica e tecnologia farmacêutica internacional.",
-            "url": "https://pharmacomlabs-site.com/sobre-a-pharmacom.html"
+            "name": "Sobre Nós",
+            "url": "https://pharmacomlabs-site.com/sobre-nos"
           }
         ]
       }
@@ -146,27 +126,6 @@
   </script>
 
   <style>
-    /* ════════════════════════════════════════════════════
-       VARIÁVEIS DE CUSTOMIZAÇÃO RÁPIDA (BLUR & OVERLAY)
-    ════════════════════════════════════════════════════ */
-    :root {
-      /* Imagem de Fundo Oficial */
-      --bg-image: url('bg-pharmacom.png');
-
-      /* Desfoque do Fundo (Blur) */
-      --bg-blur-amount: 9px;
-
-      /* Escurecimento e Overlay */
-      --overlay-bg: rgba(6, 9, 14, 0.82);
-      --overlay-vignette: radial-gradient(circle at 50% 45%, rgba(13, 19, 28, 0.65) 0%, rgba(4, 6, 9, 0.94) 100%);
-      
-      /* Cores do Design System */
-      --color-accent: #00c0f3;
-      --color-accent-glow: rgba(0, 192, 243, 0.45);
-      --color-text-dim: #94a3b8;
-      --color-text-bright: #f8fafc;
-    }
-
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -174,300 +133,129 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    html, body {
-      width: 100%;
-      height: 100%;
+    body {
+      background: #101216;
       min-height: 100vh;
-      background: #090c10;
-      font-family: 'Sora', 'Inter', sans-serif;
-      color: var(--color-text-bright);
+      font-family: 'Sora', sans-serif;
       overflow: hidden;
       cursor: pointer;
       user-select: none;
     }
 
-    /* ════════════════════════════════════════════════════
-       CAMADA DE FUNDO COM BLUR E OVERLAY DINÂMICO
-    ════════════════════════════════════════════════════ */
-    .bg-layer {
-      position: fixed;
-      inset: -25px;
-      background: var(--bg-image) center top / cover no-repeat;
-      filter: blur(var(--bg-blur-amount)) brightness(0.72) saturate(1.15);
-      transform: scale(1.04);
-      z-index: 1;
-      will-change: transform, filter;
-      pointer-events: none;
-    }
-
-    /* Overlay escuro com vinheta para foco no popup */
-    .overlay-layer {
+    /* Imagem de Fundo (com blur no arquivo e leve overlay para contraste) */
+    body::before {
+      content: '';
       position: fixed;
       inset: 0;
-      background: var(--overlay-vignette);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      z-index: 2;
+      background: url('bg-pharmacom.png') center top / cover no-repeat;
+      z-index: 0;
+    }
+
+    /* Overlay escuro que cobre a tela toda */
+    #poppromotimer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 999998;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 14px 12px 14px;
-    }
-
-    /* Top Bar Estratégica */
-    .top-badge {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: #38bdf8;
-      background: rgba(0, 192, 243, 0.12);
-      border: 1px solid rgba(0, 192, 243, 0.3);
-      padding: 4px 16px;
-      border-radius: 20px;
-      backdrop-filter: blur(8px);
-      z-index: 10;
-      margin-top: 4px;
-      text-align: center;
-    }
-
-    /* ════════════════════════════════════════════════════
-       MODAL / POPUP DE OFERTA
-    ════════════════════════════════════════════════════ */
-    .modal-wrapper {
-      flex: 1;
-      width: 100%;
-      display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 10;
     }
 
-    .modal-container {
+    /* Popup do Banner */
+    #mobilefixer {
       position: relative;
-      max-width: 680px;
-      width: 92%;
-      background: #0d121c;
-      border-radius: 18px;
-      overflow: visible;
-      box-shadow: 
-        0 25px 60px -12px rgba(0, 0, 0, 0.9),
-        0 0 0 1px rgba(255, 255, 255, 0.12),
-        0 0 35px var(--color-accent-glow);
-      animation: modalEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      max-width: 620px;
+      width: 90%;
       cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .modal-container:hover {
-      transform: translateY(-2px) scale(1.008);
-      box-shadow: 
-        0 30px 70px -10px rgba(0, 0, 0, 0.95),
-        0 0 0 1px rgba(0, 192, 243, 0.4),
-        0 0 45px var(--color-accent-glow);
-    }
-
-    @keyframes modalEntrance {
-      0% {
-        opacity: 0;
-        transform: scale(0.92) translateY(12px);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
-    }
-
-    /* Imagem do Banner */
-    .modal-banner {
-      display: block;
+    #mobilefixer img.banner {
       width: 100%;
       height: auto;
-      border-radius: 18px;
+      display: block;
       cursor: pointer;
     }
 
-    /* Botão de Fechar Elegante */
-    .close-button-wrapper {
+    /* Botão de Fechar original */
+    .hidefloat {
       position: absolute;
-      top: -16px;
-      right: -16px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      top: 0;
+      right: 0;
+      width: 54px;
+      height: auto;
       cursor: pointer;
-      z-index: 20;
-      transition: all 0.2s ease;
-    }
-
-    .close-button-wrapper:hover {
-      background: #00c0f3;
-      border-color: #ffffff;
-      transform: scale(1.12) rotate(90deg);
-      box-shadow: 0 0 20px rgba(0, 192, 243, 0.8);
-    }
-
-    .close-button-wrapper svg {
-      width: 18px;
-      height: 18px;
-      stroke: #ffffff;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    /* ════════════════════════════════════════════════════
-       RODAPÉ DE COMPLIANCE & SEO
-    ════════════════════════════════════════════════════ */
-    .compliance-footer {
-      width: 100%;
-      max-width: 980px;
-      text-align: center;
-      font-size: 11.5px;
-      color: var(--color-text-dim);
+      opacity: 0.65;
       z-index: 10;
-      padding-top: 6px;
-      line-height: 1.6;
+      transition: opacity 0.2s;
     }
 
-    .compliance-links {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      margin-bottom: 4px;
-      flex-wrap: wrap;
+    .hidefloat:hover {
+      opacity: 1;
     }
 
-    .compliance-link {
-      color: #94a3b8;
+    /* Rodapé discreto para Google Ads Compliance */
+    .discreet-footer {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 10.5px;
+      color: rgba(255, 255, 255, 0.35);
+      z-index: 999999;
+      pointer-events: auto;
+    }
+
+    .discreet-footer a {
+      color: rgba(255, 255, 255, 0.4);
       text-decoration: none;
-      font-size: 11px;
-      font-weight: 500;
-      transition: color 0.2s ease;
-      cursor: pointer;
+      margin: 0 8px;
     }
 
-    .compliance-link:hover {
-      color: #00c0f3;
+    .discreet-footer a:hover {
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: underline;
     }
 
-    .compliance-copy {
-      opacity: 0.65;
-      font-size: 10px;
-      margin-top: 2px;
-    }
-
-    /* ════════════════════════════════════════════════════
-       RESPONSIVIDADE MOBILE
-    ════════════════════════════════════════════════════ */
-    @media (max-width: 680px) {
-      .modal-container {
-        width: 94%;
-        border-radius: 14px;
-      }
-      
-      .modal-banner {
-        border-radius: 14px;
-      }
-
-      .close-button-wrapper {
-        top: -12px;
-        right: -12px;
-        width: 38px;
-        height: 38px;
-      }
-
-      .close-button-wrapper svg {
-        width: 15px;
-        height: 15px;
-      }
-
-      .compliance-footer {
-        font-size: 10px;
-        padding-bottom: 4px;
-      }
-
-      .compliance-links {
-        gap: 8px 12px;
-      }
+    @media (max-width: 700px) {
+      #mobilefixer { width: 90%; }
+      .hidefloat { width: 44px; }
+      .discreet-footer { font-size: 9.5px; bottom: 6px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Camada de Imagem de Fundo (bg-pharmacom.png) com Desfoque -->
-  <div class="bg-layer" id="bg-layer"></div>
-
-  <!-- Camada de Overlay Escuro e Conteúdo -->
-  <div class="overlay-layer" id="global-overlay">
-    
-    <div class="top-badge">
-      Site Oficial Pharmacom Brasil &bull; Verificação de Autenticidade
+  <!-- Overlay e Popup Presell -->
+  <div id="poppromotimer">
+    <div id="mobilefixer">
+      <img class="hidefloat" id="popup-close-btn" src="phcpopup/images/close4.png" alt="Fechar">
+      <img class="banner" id="popup-banner-img" src="phcpopup/images/eu_banner.gif" alt="Pharmacom Labs Oficial">
     </div>
 
-    <!-- Modal Central -->
-    <div class="modal-wrapper">
-      <div class="modal-container" id="modal-card">
-        
-        <!-- Botão Fechar -->
-        <button class="close-button-wrapper" id="btn-close" aria-label="Fechar e Acessar Site Oficial Pharmacom">
-          <svg viewBox="0 0 24 24" fill="none">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-
-        <!-- Imagem / Oferta Pharmacom Labs -->
-        <img class="modal-banner" id="promo-banner" src="phcpopup/images/eu_banner.gif" alt="Site Oficial Pharmacom Brasil - Pharmacom Labs">
-      </div>
+    <!-- Links de compliance discretos para aprovação de anúncios -->
+    <div class="discreet-footer" id="discreet-footer">
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      <span>•</span>
+      <a href="termos-de-uso.html">Termos de Uso</a>
     </div>
-
-    <!-- Rodapé com Links de Conformidade para Google Ads e SEO -->
-    <footer class="compliance-footer" id="compliance-footer">
-      <div class="compliance-links">
-        <a href="verificacao-de-autenticidade.html" class="compliance-link">Verificar Código Pharmacom</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="faq.html" class="compliance-link">Onde Comprar Pharmacom</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="faq.html" class="compliance-link">FAQ Pharmacom Brasil</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="controle-de-qualidade.html" class="compliance-link">Qualidade Laboratorial</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="sobre-a-pharmacom.html" class="compliance-link">Sobre a Pharmacom Labs</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="contato.html" class="compliance-link">Atendimento Oficial</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="politica-de-privacidade.html" class="compliance-link">Privacidade</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="termos-de-uso.html" class="compliance-link">Termos</a>
-      </div>
-      <p class="compliance-copy">
-        &copy; 2026 Pharmacom Labs Brasil. Todos os direitos reservados. Site Oficial Pharmacom — Validação anti-falsificação e suporte.
-      </p>
-    </footer>
-
   </div>
 
-  <!-- Script de Redirecionamento Universal com Repasse de Parâmetros (UTM & Ads) -->
+  <!-- Redirecionamento Universal com repasse de UTMs -->
   <script>
     (function () {
       'use strict';
 
-      // URL de Destino Principal do Ecossistema Pharmacom Oficial
       var TARGET_BASE = 'https://pharmacomoficial.com/';
       var hasRedirected = false;
 
-      /**
-       * Monta a URL final preservando todos os parâmetros de rastreamento (UTMs, gclid, etc.)
-       */
       function buildFinalUrl(baseUrl) {
         var url = baseUrl || TARGET_BASE;
         var query = window.location.search;
@@ -477,16 +265,12 @@
         return url + (url.indexOf('?') !== -1 ? '&' : '?') + cleanQuery;
       }
 
-      /**
-       * Executa o redirecionamento disparando o evento no Google Ads / GA4
-       */
-      function triggerRedirect(destinationUrl) {
+      function triggerRedirect() {
         if (hasRedirected) return;
         hasRedirected = true;
 
-        var finalTarget = destinationUrl ? buildFinalUrl(destinationUrl) : buildFinalUrl(TARGET_BASE);
+        var finalTarget = buildFinalUrl(TARGET_BASE);
 
-        // Dispara evento para Google Tag / Google Ads
         try {
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'presell_action_click', {
@@ -498,18 +282,15 @@
               'send_to': 'AW-18258552622'
             });
           }
-        } catch (err) {
-          console.warn('Tag event err:', err);
-        }
+        } catch (err) {}
 
-        // Redireciona com fallback seguro imediato
         setTimeout(function () {
           window.location.href = finalTarget;
         }, 120);
       }
 
-      // 1. Clique no botão de fechar "X"
-      var closeBtn = document.getElementById('btn-close');
+      // Clique no botão de fechar
+      var closeBtn = document.getElementById('popup-close-btn');
       if (closeBtn) {
         closeBtn.addEventListener('click', function (e) {
           e.preventDefault();
@@ -518,25 +299,21 @@
         });
       }
 
-      // 2. Clique no Banner / Card do Modal
-      var modalCard = document.getElementById('modal-card');
-      if (modalCard) {
-        modalCard.addEventListener('click', function (e) {
-          if (!e.target.closest('#btn-close')) {
-            e.preventDefault();
-            e.stopPropagation();
-            triggerRedirect();
-          }
+      // Clique no banner
+      var bannerImg = document.getElementById('popup-banner-img');
+      if (bannerImg) {
+        bannerImg.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          triggerRedirect();
         });
       }
 
-      // 3. Clique no Overlay / Fundo da Página (Redirecionamento Universal)
-      var globalOverlay = document.getElementById('global-overlay');
-      if (globalOverlay) {
-        globalOverlay.addEventListener('click', function (e) {
-          if (e.target.closest('#compliance-footer')) {
-            return;
-          }
+      // Clique no fundo escuro
+      var popup = document.getElementById('poppromotimer');
+      if (popup) {
+        popup.addEventListener('click', function (e) {
+          if (e.target.closest('#discreet-footer')) return;
           e.preventDefault();
           triggerRedirect();
         });

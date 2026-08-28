@@ -3,227 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termos de Uso | Pharmacom Labs</title>
-  <meta name="description" content="Termos de uso, diretrizes de navegação e condições de conformidade da Pharmacom Labs.">
+  <title>Termos de Uso | Pharmacom Labs Brasil</title>
+  <meta name="description" content="Termos de uso e diretrizes informativas do portal institucional Pharmacom Labs Brasil.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pharmacomlabs-site.com/termos-de-uso.html">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-dark: #090c10;
-      --card-bg: rgba(18, 24, 38, 0.85);
-      --accent: #00c0f3;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --border: rgba(255, 255, 255, 0.08);
+    * {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      background: var(--bg-dark);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .navbar {
-      background: rgba(13, 17, 23, 0.95);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Sora', sans-serif;
-      font-weight: 800;
-      font-size: 19px;
-      color: #ffffff;
-      text-decoration: none;
-    }
-    .brand-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 10px var(--accent);
-    }
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-    .nav-link {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .nav-link:hover, .nav-link.active { color: var(--accent); }
-    .btn-portal {
-      background: linear-gradient(135deg, #00c0f3 0%, #0072ce 100%);
-      color: #ffffff;
-      font-family: 'Sora', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 9px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0, 192, 243, 0.35);
-      transition: all 0.2s;
-      cursor: pointer;
-      border: none;
-    }
-    .btn-portal:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(0, 192, 243, 0.6);
-    }
-    .container {
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 20px;
-      flex: 1;
-      width: 100%;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 48px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      backdrop-filter: blur(12px);
-    }
-    h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #ffffff;
-    }
-    .subtitle {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-    }
-    h2 {
-      font-family: 'Sora', sans-serif;
-      font-size: 19px;
-      font-weight: 600;
-      margin-top: 28px;
-      margin-bottom: 12px;
-      color: var(--accent);
-    }
-    p { margin-bottom: 16px; font-size: 14.5px; color: #cbd5e1; }
-    ul { margin-left: 20px; margin-bottom: 16px; font-size: 14.5px; color: #cbd5e1; }
-    li { margin-bottom: 8px; }
-    .footer {
-      background: #06090e;
-      border-top: 1px solid var(--border);
-      padding: 30px 20px;
-      text-align: center;
+      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 12px;
-      color: var(--text-muted);
-      margin-top: auto;
+      font-weight: normal;
+      line-height: 1.4;
+      color: #a4a9b3;
+      background: #14171c;
+      min-height: 100vh;
     }
-    .footer-links {
+
+    #wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    #header-main {
+      position: relative;
+      height: 75px;
+      margin-bottom: 20px;
+      background: url(logo-under.png) left bottom no-repeat transparent;
       display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 12px;
     }
-    .footer-links a { color: var(--text-muted); text-decoration: none; }
-    .footer-links a:hover { color: var(--accent); }
+
+    #logo img {
+      height: 43px;
+      width: auto;
+      display: block;
+    }
+
+    #nav-main {
+      height: 40px;
+      background: #393e46;
+      border-bottom: 2px solid #00a8e8;
+    }
+
+    #nav-main ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      overflow-x: auto;
+    }
+
+    #nav-main ul li {
+      height: 100%;
+      border-right: 1px solid #4a505b;
+      white-space: nowrap;
+    }
+
+    #nav-main ul li a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 16px;
+      color: #cfd4dc;
+      text-decoration: none;
+      font-size: 11.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    #nav-main ul li.home a {
+      background: #00a8e8;
+      color: #ffffff;
+      width: 44px;
+      justify-content: center;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    #nav-main ul li a:hover, #nav-main ul li.active a {
+      background: #25282e;
+      color: #00a8e8;
+    }
+
+    #content-main {
+      padding: 20px 0;
+    }
+
+    .blocks {
+      margin-bottom: 20px;
+    }
+
+    .block.gray {
+      background: #23272e;
+      border: 1px solid #323740;
+      padding: 24px 28px;
+    }
+
+    .info {
+      color: #00a8e8;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4 {
+      color: #00a8e8;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #a4a9b3;
+      font-size: 12px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    #footer-main {
+      border-top: 1px solid #2b2f38;
+      padding: 24px 0 40px 0;
+      text-align: center;
+    }
+
+    #footer-main .legal-links {
+      margin-bottom: 8px;
+    }
+
+    #footer-main .legal-links a {
+      color: #727a8a;
+      text-decoration: none;
+      font-size: 11px;
+      margin: 0 8px;
+    }
+
+    #footer-main .legal-links a:hover {
+      color: #00a8e8;
+    }
+
+    #footer-main .copy {
+      color: #5a606d;
+      font-size: 11px;
+    }
+
     @media (max-width: 768px) {
-      .navbar { flex-direction: column; gap: 12px; }
-      .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
-      .card { padding: 24px; }
-      h1 { font-size: 22px; }
+      #header-main { height: auto; padding: 12px 0; background-size: cover; }
+      .block.gray { padding: 18px 14px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="brand">
-      <span class="brand-dot"></span> Pharmacom Labs
-    </a>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link">Início</a>
-      <a href="verificacao-de-autenticidade.html" class="nav-link">Verificar Código</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="controle-de-qualidade.html" class="nav-link">Qualidade</a>
-      <a href="sobre-a-pharmacom.html" class="nav-link">Sobre</a>
-      <a href="contato.html" class="nav-link">Contato</a>
-      <button class="btn-portal" onclick="goToOfficial()">Portal Oficial &rarr;</button>
+  <div id="wrapper">
+    <header id="header-main">
+      <a href="index.html" id="logo">
+        <img src="logo-phc.png" alt="Pharmacom Labs">
+      </a>
+    </header>
+
+    <div id="nav-main">
+      <ul>
+        <li class="home"><a href="index.html">&#8962;</a></li>
+        <li class="about"><a href="sobre-a-pharmacom.html">Sobre Nós</a></li>
+        <li class="products"><a href="product/index.html">Produtos</a></li>
+        <li class="dealers"><a href="verificacao-de-autenticidade.html">Verificar código</a></li>
+        <li class="quality"><a href="controle-de-qualidade.html">Qualidade</a></li>
+        <li class="faq"><a href="faq.html">FAQ</a></li>
+        <li class="contact"><a href="contato.html">Contato</a></li>
+      </ul>
     </div>
-  </nav>
 
-  <main class="container">
-    <div class="card">
-      <h1>Termos de Uso</h1>
-      <p class="subtitle">Última atualização: Agosto de 2026</p>
+    <section id="content-main">
+      <div class="blocks">
+        <div class="block gray">
+          <div class="info">TERMOS // CONDIÇÕES DE USO</div>
+          <h1>TERMOS DE USO</h1>
+          <p>
+            O portal Pharmacom Labs tem caráter estritamente institucional e informativo. O objetivo deste website é prover informações sobre controle de qualidade, identificação de produtos originais e orientações sobre como evitar falsificações no mercado.
+          </p>
+          <p>
+            Ao utilizar este site e seu sistema de validação de códigos, o usuário declara estar ciente de que as marcas, logotipos e conteúdos pertencem à Pharmacom Labs e não podem ser reproduzidos sem autorização prévia.
+          </p>
+          <p>
+            Reservamo-nos o direito de atualizar estes termos a qualquer momento para refletir melhorias técnicas e conformidades regulatórias.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <p>Bem-vindo ao portal da Pharmacom Labs. Ao acessar este site e suas páginas associadas, você concorda com os termos, diretrizes e condições descritas neste documento.</p>
-
-      <h2>1. Finalidade Informativa e Institucional</h2>
-      <p>Este ambiente destina-se a apresentar informações institucionais, novidades sobre tecnologias de produção farmacêutica e sistemas de verificação de autenticidade de lotes laboratoriais.</p>
-
-      <h2>2. Propriedade Intelectual</h2>
-      <p>Todas as marcas, logotipos, elementos visuais, códigos-fonte e materiais apresentados são de propriedade exclusiva da Pharmacom Labs ou devidamente licenciados, sendo vedada a reprodução não autorizada para fins fraudulentos ou imitação.</p>
-
-      <h2>3. Autenticidade e Verificação de Lotes</h2>
-      <p>A Pharmacom Labs oferece sistemas dedicados para consulta de autenticidade. O usuário reconhece que a verificação de produtos originais deve ser realizada unicamente através dos canais e códigos oficiais indicados nos rótulos de segurança.</p>
-
-      <h2>4. Limitação de Responsabilidade</h2>
-      <p>Empenhamos os melhores esforços para manter a disponibilidade e precisão de todas as informações. Não nos responsabilizamos por instabilidades temporárias de conexão provocadas por operadoras de telecomunicação ou ataques cibernéticos de terceiros.</p>
-
-      <h2>5. Alterações dos Termos</h2>
-      <p>Reservamo-nos o direito de atualizar estes termos periodicamente para refletir evoluções tecnológicas ou conformidades legais vigentes.</p>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="index.html">Início</a> •
-      <a href="verificacao-de-autenticidade.html">Verificar Código</a> •
-      <a href="faq.html">FAQ</a> •
-      <a href="controle-de-qualidade.html">Controle de Qualidade</a> •
-      <a href="sobre-a-pharmacom.html">Sobre Nós</a> •
-      <a href="contato.html">Contato</a> •
-      <a href="politica-de-privacidade.html">Privacidade</a> •
-      <a href="termos-de-uso.html">Termos</a>
-    </div>
-    <p>&copy; 2026 Pharmacom Labs. Todos os direitos reservados.</p>
-  </footer>
-
-  <script>
-    function goToOfficial() {
-      var targetBase = 'https://pharmacomoficial.com/';
-      var query = window.location.search;
-      var finalUrl = targetBase;
-      if (query) {
-        var clean = query.startsWith('?') ? query.substring(1) : query;
-        finalUrl = targetBase + (targetBase.indexOf('?') !== -1 ? '&' : '?') + clean;
-      }
-      window.location.href = finalUrl;
-    }
-  </script>
+    <footer id="footer-main">
+      <div class="legal-links">
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <span>•</span>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+      </div>
+      <p class="copy">&copy; Copyright Pharmacom Labs, 2010-2026. Todos os direitos reservados.</p>
+    </footer>
+  </div>
 </body>
 </html>

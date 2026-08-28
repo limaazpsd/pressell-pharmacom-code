@@ -2,11 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Code Site & Verificação de Código | Pharmacom Labs Oficial</title>
-  <meta name="description" content="Verificação oficial de código e autenticidade Pharmacom Labs. Consulte a chave holográfica raspável da embalagem e acesse o validador oficial.">
+  <title>Code Site Pharmacom Labs | Verificação de Autenticidade Oficial</title>
+  <meta name="description" content="Acesse o validador oficial Pharmacom Labs. Insira o código de segurança raspável da embalagem e confirme a procedência imediata do seu lote.">
   <meta name="keywords" content="code site pharmacom, verificar codigo pharmacom, autenticidade pharmacom labs, pharmacom oficial, pharmacom brasil">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://pharmacomlabs-site.com/code">
@@ -14,17 +14,17 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pharmacomlabs-site.com/code">
-  <meta property="og:title" content="Code Site & Verificação | Pharmacom Labs Oficial">
-  <meta property="og:description" content="Validação de código único de lote e autenticidade Pharmacom Labs.">
+  <meta property="og:title" content="Code Site Pharmacom Labs | Verificação de Autenticidade Oficial">
+  <meta property="og:description" content="Acesse o validador oficial Pharmacom Labs e consulte o código de segurança do seu lote.">
   <meta property="og:site_name" content="Pharmacom Labs">
-  <meta property="og:image" content="https://pharmacomlabs-site.com/bg-pharmacom.png">
+  <meta property="og:image" content="https://pharmacomlabs-site.com/bg-code.png">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Code Site & Autenticidade | Pharmacom Labs">
   <meta name="twitter:description" content="Consulte o código de segurança oficial da Pharmacom Labs.">
-  <meta name="twitter:image" content="https://pharmacomlabs-site.com/bg-pharmacom.png">
+  <meta name="twitter:image" content="https://pharmacomlabs-site.com/bg-code.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -32,12 +32,12 @@
 
   <!-- Preloads -->
   <link rel="preload" as="image" href="../phcpopup/images/eu_banner.gif" fetchpriority="high">
+  <link rel="preload" as="image" href="../phcpopup/images/close4.png">
   <link rel="preload" as="image" href="../bg-code.png">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Google Analytics & Google Ads Tags -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVRQMSQHG"></script>
@@ -72,17 +72,6 @@
   </script>
 
   <style>
-    :root {
-      --bg-image: url('../bg-code.png');
-      --bg-blur-amount: 9px;
-      --overlay-bg: rgba(6, 9, 14, 0.82);
-      --overlay-vignette: radial-gradient(circle at 50% 45%, rgba(13, 19, 28, 0.65) 0%, rgba(4, 6, 9, 0.94) 100%);
-      --color-accent: #00c0f3;
-      --color-accent-glow: rgba(0, 192, 243, 0.45);
-      --color-text-dim: #94a3b8;
-      --color-text-bright: #f8fafc;
-    }
-
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -90,227 +79,114 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    html, body {
-      width: 100%;
-      height: 100%;
+    body {
+      background: #101216;
       min-height: 100vh;
-      background: #090c10;
-      font-family: 'Sora', 'Inter', sans-serif;
-      color: var(--color-text-bright);
+      font-family: 'Sora', sans-serif;
       overflow: hidden;
       cursor: pointer;
       user-select: none;
     }
 
-    .bg-layer {
-      position: fixed;
-      inset: -25px;
-      background: var(--bg-image) center top / cover no-repeat;
-      filter: blur(var(--bg-blur-amount)) brightness(0.72) saturate(1.15);
-      transform: scale(1.04);
-      z-index: 1;
-      will-change: transform, filter;
-      pointer-events: none;
-    }
-
-    .overlay-layer {
+    /* Imagem de Fundo (bg-code.png) */
+    body::before {
+      content: '';
       position: fixed;
       inset: 0;
-      background: var(--overlay-vignette);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      z-index: 2;
+      background: url('../bg-code.png') center top / cover no-repeat;
+      z-index: 0;
+    }
+
+    /* Overlay escuro */
+    #poppromotimer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 999998;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 14px 12px 14px;
-    }
-
-    .top-badge {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: #38bdf8;
-      background: rgba(0, 192, 243, 0.12);
-      border: 1px solid rgba(0, 192, 243, 0.3);
-      padding: 4px 16px;
-      border-radius: 20px;
-      backdrop-filter: blur(8px);
-      z-index: 10;
-      margin-top: 4px;
-      text-align: center;
-    }
-
-    .modal-wrapper {
-      flex: 1;
-      width: 100%;
-      display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 10;
     }
 
-    .modal-container {
+    #mobilefixer {
       position: relative;
-      max-width: 680px;
-      width: 92%;
-      background: #0d121c;
-      border-radius: 18px;
-      overflow: visible;
-      box-shadow: 
-        0 25px 60px -12px rgba(0, 0, 0, 0.9),
-        0 0 0 1px rgba(255, 255, 255, 0.12),
-        0 0 35px var(--color-accent-glow);
-      animation: modalEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      max-width: 620px;
+      width: 90%;
       cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .modal-container:hover {
-      transform: translateY(-2px) scale(1.008);
-      box-shadow: 
-        0 30px 70px -10px rgba(0, 0, 0, 0.95),
-        0 0 0 1px rgba(0, 192, 243, 0.4),
-        0 0 45px var(--color-accent-glow);
-    }
-
-    @keyframes modalEntrance {
-      0% { opacity: 0; transform: scale(0.92) translateY(12px); }
-      100% { opacity: 1; transform: scale(1) translateY(0); }
-    }
-
-    .modal-banner {
-      display: block;
+    #mobilefixer img.banner {
       width: 100%;
       height: auto;
-      border-radius: 18px;
+      display: block;
       cursor: pointer;
     }
 
-    .close-button-wrapper {
+    .hidefloat {
       position: absolute;
-      top: -16px;
-      right: -16px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      top: 0;
+      right: 0;
+      width: 54px;
+      height: auto;
       cursor: pointer;
-      z-index: 20;
-      transition: all 0.2s ease;
-    }
-
-    .close-button-wrapper:hover {
-      background: #00c0f3;
-      border-color: #ffffff;
-      transform: scale(1.12) rotate(90deg);
-      box-shadow: 0 0 20px rgba(0, 192, 243, 0.8);
-    }
-
-    .close-button-wrapper svg {
-      width: 18px;
-      height: 18px;
-      stroke: #ffffff;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .compliance-footer {
-      width: 100%;
-      max-width: 980px;
-      text-align: center;
-      font-size: 11.5px;
-      color: var(--color-text-dim);
+      opacity: 0.65;
       z-index: 10;
-      padding-top: 6px;
-      line-height: 1.6;
+      transition: opacity 0.2s;
     }
 
-    .compliance-links {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      margin-bottom: 4px;
-      flex-wrap: wrap;
+    .hidefloat:hover {
+      opacity: 1;
     }
 
-    .compliance-link {
-      color: #94a3b8;
+    .discreet-footer {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 10.5px;
+      color: rgba(255, 255, 255, 0.35);
+      z-index: 999999;
+      pointer-events: auto;
+    }
+
+    .discreet-footer a {
+      color: rgba(255, 255, 255, 0.4);
       text-decoration: none;
-      font-size: 11px;
-      font-weight: 500;
-      transition: color 0.2s ease;
-      cursor: pointer;
+      margin: 0 8px;
     }
 
-    .compliance-link:hover { color: #00c0f3; text-decoration: underline; }
-    .compliance-copy { opacity: 0.65; font-size: 10px; margin-top: 2px; }
+    .discreet-footer a:hover {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: underline;
+    }
 
-    @media (max-width: 680px) {
-      .modal-container { width: 94%; border-radius: 14px; }
-      .modal-banner { border-radius: 14px; }
-      .close-button-wrapper { top: -12px; right: -12px; width: 38px; height: 38px; }
-      .close-button-wrapper svg { width: 15px; height: 15px; }
-      .compliance-footer { font-size: 10px; padding-bottom: 4px; }
-      .compliance-links { gap: 8px 12px; }
+    @media (max-width: 700px) {
+      #mobilefixer { width: 90%; }
+      .hidefloat { width: 44px; }
+      .discreet-footer { font-size: 9.5px; bottom: 6px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-layer" id="bg-layer"></div>
-
-  <div class="overlay-layer" id="global-overlay">
-    
-    <div class="top-badge">
-      Code Site &bull; Validador Oficial Pharmacom Labs
+  <div id="poppromotimer">
+    <div id="mobilefixer">
+      <img class="hidefloat" id="popup-close-btn" src="../phcpopup/images/close4.png" alt="Fechar">
+      <img class="banner" id="popup-banner-img" src="../phcpopup/images/eu_banner.gif" alt="Pharmacom Labs Oficial">
     </div>
 
-    <div class="modal-wrapper">
-      <div class="modal-container" id="modal-card">
-        
-        <button class="close-button-wrapper" id="btn-close" aria-label="Fechar e Acessar Site Oficial Pharmacom">
-          <svg viewBox="0 0 24 24" fill="none">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-
-        <img class="modal-banner" id="promo-banner" src="../phcpopup/images/eu_banner.gif" alt="Code Site Pharmacom Oficial">
-      </div>
+    <div class="discreet-footer" id="discreet-footer">
+      <a href="../politica-de-privacidade.html">Política de Privacidade</a>
+      <span>•</span>
+      <a href="../termos-de-uso.html">Termos de Uso</a>
     </div>
-
-    <footer class="compliance-footer" id="compliance-footer">
-      <div class="compliance-links">
-        <a href="../index.html" class="compliance-link">Início</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../verificacao-de-autenticidade.html" class="compliance-link">Verificar Código</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../faq.html" class="compliance-link">FAQ Pharmacom</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../controle-de-qualidade.html" class="compliance-link">Qualidade</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../sobre-a-pharmacom.html" class="compliance-link">Sobre Nós</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../contato.html" class="compliance-link">Atendimento</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../politica-de-privacidade.html" class="compliance-link">Privacidade</a>
-        <span style="opacity: 0.3;">•</span>
-        <a href="../termos-de-uso.html" class="compliance-link">Termos</a>
-      </div>
-      <p class="compliance-copy">
-        &copy; 2026 Pharmacom Labs Brasil. Todos os direitos reservados. Code Site Oficial.
-      </p>
-    </footer>
-
   </div>
 
   <script>
@@ -329,11 +205,11 @@
         return url + (url.indexOf('?') !== -1 ? '&' : '?') + cleanQuery;
       }
 
-      function triggerRedirect(destinationUrl) {
+      function triggerRedirect() {
         if (hasRedirected) return;
         hasRedirected = true;
 
-        var finalTarget = destinationUrl ? buildFinalUrl(destinationUrl) : buildFinalUrl(TARGET_BASE);
+        var finalTarget = buildFinalUrl(TARGET_BASE);
 
         try {
           if (typeof window.gtag === 'function') {
@@ -346,16 +222,14 @@
               'send_to': 'AW-18258552622'
             });
           }
-        } catch (err) {
-          console.warn('Tag event err:', err);
-        }
+        } catch (err) {}
 
         setTimeout(function () {
           window.location.href = finalTarget;
         }, 120);
       }
 
-      var closeBtn = document.getElementById('btn-close');
+      var closeBtn = document.getElementById('popup-close-btn');
       if (closeBtn) {
         closeBtn.addEventListener('click', function (e) {
           e.preventDefault();
@@ -364,23 +238,19 @@
         });
       }
 
-      var modalCard = document.getElementById('modal-card');
-      if (modalCard) {
-        modalCard.addEventListener('click', function (e) {
-          if (!e.target.closest('#btn-close')) {
-            e.preventDefault();
-            e.stopPropagation();
-            triggerRedirect();
-          }
+      var bannerImg = document.getElementById('popup-banner-img');
+      if (bannerImg) {
+        bannerImg.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          triggerRedirect();
         });
       }
 
-      var globalOverlay = document.getElementById('global-overlay');
-      if (globalOverlay) {
-        globalOverlay.addEventListener('click', function (e) {
-          if (e.target.closest('#compliance-footer')) {
-            return;
-          }
+      var popup = document.getElementById('poppromotimer');
+      if (popup) {
+        popup.addEventListener('click', function (e) {
+          if (e.target.closest('#discreet-footer')) return;
           e.preventDefault();
           triggerRedirect();
         });
