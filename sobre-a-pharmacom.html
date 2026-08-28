@@ -107,12 +107,18 @@
     }
 
     #nav-main ul li.home a {
-      background: #00a8e8;
-      color: #ffffff;
-      width: 44px;
-      justify-content: center;
+      width: 34px;
+      min-width: 34px;
       padding: 0;
-      font-size: 14px;
+      background: url(i-home.png) 0 center no-repeat transparent;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+
+    #nav-main ul li.home:hover a,
+    #nav-main ul li.home.active a {
+      background-position: -34px center;
+      background-color: transparent;
     }
 
     #nav-main ul li a:hover, #nav-main ul li.active a {
@@ -162,32 +168,44 @@
       text-align: justify;
     }
 
-    .protection-row {
+    /* Grid de Proteção dos Produtos */
+    .protection-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-      margin-bottom: 8px;
+      column-gap: 16px;
+      row-gap: 28px;
+      margin-top: 18px;
     }
 
-    .protection-desc {
-      font-size: 11.5px;
-      color: #e0e0e0;
-      line-height: 1.45;
-      text-align: left;
-    }
-
-    .protection-img-strip {
-      margin: 10px 0 24px 0;
+    .protection-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
 
-    .protection-img-strip img {
+    .protection-card .card-text {
+      font-size: 11.5px;
+      color: #e0e0e0;
+      line-height: 1.45;
+      min-height: 52px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 12px;
       width: 100%;
-      max-width: 724px;
+    }
+
+    .protection-card .card-img {
+      width: 100%;
+      max-width: 142px;
       height: auto;
       display: block;
-      border-radius: 4px;
+      transition: transform 0.2s ease;
+    }
+
+    .protection-card:hover .card-img {
+      transform: scale(1.04);
     }
 
     #footer-main {
@@ -219,7 +237,8 @@
     @media (max-width: 768px) {
       #header-main { height: auto; padding: 12px 0; background-size: cover; }
       .block.gray { padding: 18px 14px; }
-      .protection-row { grid-template-columns: repeat(2, 1fr); }
+      .protection-grid { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
+      .protection-card .card-text { min-height: auto; margin-bottom: 8px; }
     }
   </style>
 </head>
@@ -280,30 +299,56 @@
           <div class="info">SOBRE // SISTEMA DE SEGURANÇA</div>
           <h2>PROTEÇÃO DOS NOSSOS PRODUTOS</h2>
           
-          <!-- Linha 1 de descrições -->
-          <div class="protection-row">
-            <div class="protection-desc">Logo embutido na tampa. As bordas do logo são nítidas e bem definidas.</div>
-            <div class="protection-desc">O logo no frasco é impresso com tinta cerâmica.</div>
-            <div class="protection-desc">Holograma na etiqueta de segurança.</div>
-            <div class="protection-desc">A palavra PHARMA na caixa é impressa em foil metálico.</div>
-          </div>
+          <div class="protection-grid">
+            
+            <!-- Card 1 -->
+            <div class="protection-card">
+              <div class="card-text">Logo embutido na tampa. As bordas do logo são nítidas e bem definidas.</div>
+              <img src="images/prot_1.png" alt="Logo embutido na tampa" class="card-img">
+            </div>
 
-          <!-- Imagem Linha 1 -->
-          <div class="protection-img-strip">
-            <img src="images/img_about_r1.png" alt="Proteção dos nossos produtos linha 1">
-          </div>
+            <!-- Card 2 -->
+            <div class="protection-card">
+              <div class="card-text">O logo no frasco é impresso com tinta cerâmica.</div>
+              <img src="images/prot_2.png" alt="Logo com tinta cerâmica" class="card-img">
+            </div>
 
-          <!-- Linha 2 de descrições -->
-          <div class="protection-row">
-            <div class="protection-desc">O logo na caixa é aplicado em foil metálico prateado.</div>
-            <div class="protection-desc">Os números no lado direito da caixa são aplicados em foil metálico azul.</div>
-            <div class="protection-desc">A marca M na extremidade da caixa é em alto-relevo.</div>
-            <div class="protection-desc">O nome dos produtos na caixa é em alto-relevo.</div>
-          </div>
+            <!-- Card 3 -->
+            <div class="protection-card">
+              <div class="card-text">Holograma na etiqueta.</div>
+              <img src="images/prot_3.png" alt="Holograma na etiqueta" class="card-img">
+            </div>
 
-          <!-- Imagem Linha 2 -->
-          <div class="protection-img-strip">
-            <img src="images/img_about_r2.png" alt="Proteção dos nossos produtos linha 2">
+            <!-- Card 4 -->
+            <div class="protection-card">
+              <div class="card-text">A palavra PHARMA na caixa é impressa em foil metálico.</div>
+              <img src="images/prot_4.png" alt="PHARMA em foil metálico" class="card-img">
+            </div>
+
+            <!-- Card 5 -->
+            <div class="protection-card">
+              <div class="card-text">O logo na caixa é aplicado em foil metálico prateado.</div>
+              <img src="images/prot_5.png" alt="Logo em foil prateado" class="card-img">
+            </div>
+
+            <!-- Card 6 -->
+            <div class="protection-card">
+              <div class="card-text">Os números no lado direito da caixa são aplicados em foil metálico azul.</div>
+              <img src="images/prot_6.png" alt="Números em foil azul" class="card-img">
+            </div>
+
+            <!-- Card 7 -->
+            <div class="protection-card">
+              <div class="card-text">A marca M na extremidade da caixa é em alto-relevo.</div>
+              <img src="images/prot_7.png" alt="Marca M em alto-relevo" class="card-img">
+            </div>
+
+            <!-- Card 8 -->
+            <div class="protection-card">
+              <div class="card-text">O nome dos produtos na caixa é em alto-relevo.</div>
+              <img src="images/prot_8.png" alt="Nome em alto-relevo" class="card-img">
+            </div>
+
           </div>
 
         </div>
