@@ -100,17 +100,19 @@
     }
 
     #nav-main ul li.home a {
-      background: #00a8e8;
-      color: #ffffff;
-      width: 44px;
-      justify-content: center;
+      width: 34px;
+      min-width: 34px;
       padding: 0;
-      font-size: 14px;
+      background: url(images/home_idle.png) center center no-repeat transparent;
+      text-indent: -9999px;
+      overflow: hidden;
+      display: block;
+      transition: none;
     }
 
-    #nav-main ul li a:hover, #nav-main ul li.active a {
-      background: #25282e;
-      color: #00a8e8;
+    #nav-main ul li.home a:hover,
+    #nav-main ul li.home.active a {
+      background: url(images/home_hover.png) center center no-repeat transparent !important;
     }
 
     #content-main {

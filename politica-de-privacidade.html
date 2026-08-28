@@ -103,15 +103,16 @@
       width: 34px;
       min-width: 34px;
       padding: 0;
-      background: url(i-home.png) 0 center no-repeat transparent;
+      background: url(images/home_idle.png) center center no-repeat transparent;
       text-indent: -9999px;
       overflow: hidden;
+      display: block;
+      transition: none;
     }
 
-    #nav-main ul li.home:hover a,
+    #nav-main ul li.home a:hover,
     #nav-main ul li.home.active a {
-      background-position: -34px center;
-      background-color: transparent;
+      background: url(images/home_hover.png) center center no-repeat transparent !important;
     }
 
     #nav-main ul li a:hover, #nav-main ul li.active a {
