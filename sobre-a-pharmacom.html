@@ -162,28 +162,32 @@
       text-align: justify;
     }
 
-    .protection-list {
-      list-style: none;
-      margin: 14px 0;
+    .protection-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
+      margin-top: 14px;
+      margin-bottom: 8px;
     }
 
-    .protection-item {
-      background: #383838;
-      border: 1px solid #4e4e4e;
-      padding: 14px 16px;
-      font-size: 12px;
+    .protection-desc {
+      font-size: 11.5px;
       color: #e0e0e0;
-      line-height: 1.5;
+      line-height: 1.45;
+      text-align: left;
     }
 
-    .protection-item strong {
-      color: #00a8e8;
+    .protection-img-strip {
+      margin: 10px 0 24px 0;
+      text-align: center;
+    }
+
+    .protection-img-strip img {
+      width: 100%;
+      max-width: 724px;
+      height: auto;
       display: block;
-      margin-bottom: 4px;
-      font-size: 12.5px;
+      border-radius: 4px;
     }
 
     #footer-main {
@@ -215,6 +219,7 @@
     @media (max-width: 768px) {
       #header-main { height: auto; padding: 12px 0; background-size: cover; }
       .block.gray { padding: 18px 14px; }
+      .protection-row { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -232,10 +237,10 @@
         <li class="home"><a href="index.html">&#8962;</a></li>
         <li class="about active"><a href="sobre-a-pharmacom.html">Sobre Nós</a></li>
         <li class="products"><a href="product/index.html">Produtos</a></li>
-        <li class="dealers"><a href="verificacao-de-autenticidade.html">Verificar código</a></li>
+        <li class="dealers"><a href="code/index.html">Verificar código</a></li>
         <li class="quality"><a href="controle-de-qualidade.html">Qualidade</a></li>
         <li class="faq"><a href="faq.html">FAQ</a></li>
-        <li class="contact"><a href="contato.html">Contato</a></li>
+        <li class="contact"><a href="contacts/index.html">Contato</a></li>
       </ul>
     </div>
 
@@ -269,41 +274,38 @@
         </div>
       </div>
 
-      <!-- Bloco 3: Proteção dos Produtos -->
+      <!-- Bloco 3: Proteção dos Nossos Produtos -->
       <div class="blocks">
         <div class="block gray">
           <div class="info">SOBRE // SISTEMA DE SEGURANÇA</div>
           <h2>PROTEÇÃO DOS NOSSOS PRODUTOS</h2>
-          <p>
-            Para garantir a máxima integridade e proteção contra falsificações, desenvolvemos um conjunto exclusivo de elementos de segurança presentes em cada item:
-          </p>
-
-          <div class="protection-list">
-            <div class="protection-item">
-              <strong>Tampa Personalizada</strong>
-              Logo embutido na tampa com bordas nítidas, gravadas e bem definidas.
-            </div>
-            <div class="protection-item">
-              <strong>Impressão Cerâmica</strong>
-              O logotipo no frasco é impresso com tinta cerâmica de alta resistência.
-            </div>
-            <div class="protection-item">
-              <strong>Selo Holográfico</strong>
-              Holograma de segurança tridimensional na etiqueta com chave raspável única.
-            </div>
-            <div class="protection-item">
-              <strong>Foil Metálico</strong>
-              A palavra PHARMA e numerações da embalagem são impressas em foil metálico especial.
-            </div>
-            <div class="protection-item">
-              <strong>Relevo Tátil</strong>
-              A marca e os nomes nas caixas são aplicados em alto-relevo tátil tridimensional.
-            </div>
-            <div class="protection-item">
-              <strong>Foil Azul de Segurança</strong>
-              Numerações técnicas no lado direito da embalagem aplicadas em foil metálico azul.
-            </div>
+          
+          <!-- Linha 1 de descrições -->
+          <div class="protection-row">
+            <div class="protection-desc">Logo embutido na tampa. As bordas do logo são nítidas e bem definidas.</div>
+            <div class="protection-desc">O logo no frasco é impresso com tinta cerâmica.</div>
+            <div class="protection-desc">Holograma na etiqueta de segurança.</div>
+            <div class="protection-desc">A palavra PHARMA na caixa é impressa em foil metálico.</div>
           </div>
+
+          <!-- Imagem Linha 1 -->
+          <div class="protection-img-strip">
+            <img src="images/img_about_r1.png" alt="Proteção dos nossos produtos linha 1">
+          </div>
+
+          <!-- Linha 2 de descrições -->
+          <div class="protection-row">
+            <div class="protection-desc">O logo na caixa é aplicado em foil metálico prateado.</div>
+            <div class="protection-desc">Os números no lado direito da caixa são aplicados em foil metálico azul.</div>
+            <div class="protection-desc">A marca M na extremidade da caixa é em alto-relevo.</div>
+            <div class="protection-desc">O nome dos produtos na caixa é em alto-relevo.</div>
+          </div>
+
+          <!-- Imagem Linha 2 -->
+          <div class="protection-img-strip">
+            <img src="images/img_about_r2.png" alt="Proteção dos nossos produtos linha 2">
+          </div>
+
         </div>
       </div>
 
