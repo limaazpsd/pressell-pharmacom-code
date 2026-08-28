@@ -37,8 +37,8 @@
       font-size: 12px;
       font-weight: normal;
       line-height: 1.4;
-      color: #a4a9b3;
-      background: #14171c;
+      color: #e0e0e0;
+      background: #18181c;
       min-height: 100vh;
     }
 
@@ -51,11 +51,17 @@
     #header-main {
       position: relative;
       height: 75px;
-      margin-bottom: 20px;
+      margin-top: 35px;
+      margin-bottom: 60px;
       background: url(logo-under.png) left bottom no-repeat transparent;
-      display: flex;
-      align-items: center;
-      padding-bottom: 12px;
+    }
+
+    #logo {
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      display: block;
+      line-height: 0;
     }
 
     #logo img {
@@ -121,37 +127,41 @@
     }
 
     .block.gray {
-      background: #23272e;
-      border: 1px solid #323740;
+      background: #444444;
+      border: 1px solid #555555;
       padding: 24px 28px;
     }
 
     .info {
-      color: #00a8e8;
+      font-family: "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #ffffff;
       font-size: 11px;
       font-weight: bold;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     h1, h2, h3, h4 {
+      font-family: "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #00a8e8;
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 20px;
+      font-weight: 300;
       margin-bottom: 12px;
       text-transform: uppercase;
+      line-height: 1.25;
     }
 
     p {
-      color: #a4a9b3;
+      color: #e0e0e0;
       font-size: 12px;
       line-height: 1.6;
       margin-bottom: 12px;
     }
 
     .verify-box {
-      background: #1c2027;
-      border: 1px solid #2d323c;
+      background: #383838;
+      border: 1px solid #4a4a4a;
       padding: 20px;
       margin: 20px 0;
     }
@@ -159,8 +169,8 @@
     .verify-input-field {
       width: 100%;
       max-width: 400px;
-      background: #14171c;
-      border: 1px solid #3e4450;
+      background: #202020;
+      border: 1px solid #555555;
       padding: 10px 14px;
       color: #fff;
       font-size: 13px;
@@ -175,6 +185,7 @@
     .btn-action {
       background: #00a8e8;
       color: #ffffff;
+      font-family: "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 12px;
       font-weight: bold;
       text-transform: uppercase;
@@ -197,13 +208,14 @@
     }
 
     .step-box {
-      background: #1c2027;
-      border: 1px solid #2d323c;
+      background: #383838;
+      border: 1px solid #4a4a4a;
       padding: 14px 16px;
     }
 
     .step-box h4 {
-      font-size: 12px;
+      font-size: 14px;
+      font-weight: 400;
       margin-bottom: 6px;
     }
 
