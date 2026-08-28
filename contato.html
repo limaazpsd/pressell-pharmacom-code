@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atendimento & Suporte Pharmacom Brasil | Site Oficial</title>
-  <meta name="description" content="Canais oficiais de atendimento da Pharmacom Labs Brasil: suporte para validação de códigos, consultas de lotes e direcionamento para compras seguras.">
-  <meta name="keywords" content="atendimento pharmacom, suporte pharmacom brasil, contato pharmacom labs, canal oficial pharmacom">
+  <title>Contato | Pharmacom Labs</title>
+  <meta name="description" content="Central de atendimento e suporte Pharmacom Labs. Esclarecimentos sobre validação de códigos, consultas de lote e informações técnicas.">
+  <meta name="keywords" content="atendimento pharmacom, suporte pharmacom, contato pharmacom labs">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://pharmacomlabs-site.com/contato.html">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://pharmacomlabs-site.com/contato.html">
-  <meta property="og:title" content="Atendimento & Suporte Pharmacom Brasil | Site Oficial">
-  <meta property="og:description" content="Central oficial de atendimento e suporte Pharmacom Labs Brasil.">
+  <meta property="og:title" content="Contato | Pharmacom Labs">
+  <meta property="og:description" content="Central de atendimento e suporte Pharmacom Labs.">
   <meta property="og:image" content="https://pharmacomlabs-site.com/bg-pharmacom.png">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -43,16 +43,18 @@
     }
 
     #wrapper {
-      max-width: 960px;
+      max-width: 980px;
+      width: 100%;
       margin: 0 auto;
       padding: 0 10px;
     }
 
     #header-main {
       position: relative;
+      width: 958px;
+      max-width: 100%;
       height: 75px;
-      margin-top: 35px;
-      margin-bottom: 60px;
+      margin: 35px auto 60px auto;
       background: url(logo-under.png) left bottom no-repeat transparent;
     }
 
@@ -129,7 +131,7 @@
     .block.gray {
       background: #444444;
       border: 1px solid #555555;
-      padding: 24px 28px;
+      padding: 26px 30px;
     }
 
     .info {
@@ -176,6 +178,41 @@
       font-size: 14px;
       font-weight: 400;
       margin-bottom: 6px;
+    }
+
+    .contact-form {
+      margin-top: 20px;
+      background: #383838;
+      border: 1px solid #4a4a4a;
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-label {
+      display: block;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      background: #202020;
+      border: 1px solid #555555;
+      padding: 10px 12px;
+      color: #ffffff;
+      font-size: 12px;
+      font-family: inherit;
+    }
+
+    .form-textarea {
+      height: 90px;
+      resize: vertical;
     }
 
     .btn-action {
@@ -252,10 +289,10 @@
     <section id="content-main">
       <div class="blocks">
         <div class="block gray">
-          <div class="info">SUPORTE // ATENDIMENTO AO CLIENTE</div>
-          <h1>CENTRAL DE ATENDIMENTO &bull; PHARMACOM BRASIL</h1>
+          <div class="info">SUPORTE // ATENDIMENTO</div>
+          <h1>CENTRAL DE ATENDIMENTO</h1>
           <p>
-            Para esclarecer dúvidas técnicas sobre lotes, validação de códigos de autenticidade ou atendimento oficial no Brasil, utilize nossos canais diretos.
+            Para esclarecer dúvidas técnicas sobre lotes, validação de códigos de autenticidade ou suporte ao cliente, utilize o formulário abaixo:
           </p>
 
           <div class="contact-grid">
@@ -264,13 +301,27 @@
               <p>Auxílio na checagem de códigos de segurança raspáveis e relatórios de consulta.</p>
             </div>
             <div class="c-item">
-              <h4>Canal Oficial de Distribuição</h4>
-              <p>Orientações sobre revendedores credenciados e atendimento oficial.</p>
+              <h4>Atendimento Geral</h4>
+              <p>Orientações técnicas sobre especificações de síntese e pureza.</p>
             </div>
           </div>
 
-          <div style="text-align: center; margin-top: 20px;">
-            <a href="https://pharmacomoficial.com/" class="btn-action" onclick="goToOfficial(event)">ACESSAR ATENDIMENTO NO SITE OFICIAL &rarr;</a>
+          <div class="contact-form">
+            <form onsubmit="goToOfficial(event)">
+              <div class="form-group">
+                <label class="form-label">Nome Completo:</label>
+                <input type="text" class="form-input" placeholder="Seu nome" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">E-mail para Contato:</label>
+                <input type="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Mensagem:</label>
+                <textarea class="form-textarea" placeholder="Descreva sua dúvida ou código a verificar..." required></textarea>
+              </div>
+              <button type="submit" class="btn-action">ENVIAR MENSAGEM &gt;&gt;</button>
+            </form>
           </div>
         </div>
       </div>
