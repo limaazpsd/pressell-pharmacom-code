@@ -1,0 +1,63 @@
+# robots.txt para Pharmacom Labs (https://pharmacomlabs-site.com/)
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /verificacao-de-autenticidade.html
+Allow: /faq.html
+Allow: /controle-de-qualidade.html
+Allow: /sobre-a-pharmacom.html
+Allow: /contato.html
+Allow: /politica-de-privacidade.html
+Allow: /termos-de-uso.html
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Motores de Busca e Rastreamento de Anúncios
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Rastreadores de Inteligência Artificial (AI / LLMs)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap
+Sitemap: https://pharmacomlabs-site.com/sitemap.xml

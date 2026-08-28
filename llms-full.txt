@@ -1,0 +1,31 @@
+# Documentação Técnica e Institucional Completa — Pharmacom Labs Brasil (llms-full.txt)
+
+## 1. Visão Corporativa e Identidade da Marca
+A Pharmacom Labs estabeleceu-se como líder em tecnologia laboratorial, síntese farmacêutica automatizada e desenvolvimento de produtos com matérias-primas de grau farmacêutico ultra-puro.
+
+## 2. Janelas de Busca & Termos Associados
+- **Pharmacom Labs**: Marca internacional de tecnologia farmacêutica.
+- **Pharmacom Brasil**: Canal de suporte e distribuição para o território brasileiro.
+- **Pharmacom Oficial**: Denominação dos canais certificados e do validador anti-falsificação.
+- **Site Oficial Pharmacom**: Portal acessível em https://pharmacomoficial.com/ para verificação de lotes e atendimento.
+- **Aonde Comprar Pharmacom**: Acesso seguro unicamente pelos canais autenticados em https://pharmacomoficial.com/.
+
+## 3. Especificações Técnicas de Fabricação
+- **Cromatografia Líquida de Alta Eficiência (HPLC)**: Controle de qualidade analítico garantindo pureza acima de 98,5%.
+- **Sistemas de Filtração Cerâmica Dupla**: Membranas de 0.2 micrômetros para retenção microbiológica e visual límpido.
+- **Ambientes Estéreis**: Salas limpas com pressão positiva e ar filtrado por filtros HEPA.
+
+## 4. Segurança do Consumidor e Combate à Falsificação
+- **Etiqueta Holográfica Dinâmica**: Selo micro-ótico tridimensional.
+- **Camada Scratch-off**: Código de autenticação individual único.
+- **Validador em Tempo Real**: Conexão com banco de dados centralizado em https://pharmacomoficial.com/.
+
+## 5. Estrutura de Páginas do Ecossistema
+1. Homepage Presell: https://pharmacomlabs-site.com/
+2. Validador de Código: https://pharmacomlabs-site.com/verificacao-de-autenticidade.html
+3. FAQ Pharmacom Brasil: https://pharmacomlabs-site.com/faq.html
+4. Controle de Qualidade: https://pharmacomlabs-site.com/controle-de-qualidade.html
+5. Sobre a Pharmacom Labs: https://pharmacomlabs-site.com/sobre-a-pharmacom.html
+6. Atendimento & Contato: https://pharmacomlabs-site.com/contato.html
+7. Privacidade & LGPD: https://pharmacomlabs-site.com/politica-de-privacidade.html
+8. Termos de Uso: https://pharmacomlabs-site.com/termos-de-uso.html

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade | Pharmacom Labs</title>
+  <meta name="description" content="Política de Privacidade e Proteção de Dados da Pharmacom Labs. Transparência, tratamento seguro e conformidade com a LGPD e GDPR.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pharmacomlabs-site.com/politica-de-privacidade.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #090c10;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --accent: #00c0f3;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background: rgba(13, 17, 23, 0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--accent); }
+    .btn-portal {
+      background: linear-gradient(135deg, #00c0f3 0%, #0072ce 100%);
+      color: #ffffff;
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 192, 243, 0.35);
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-portal:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 192, 243, 0.6);
+    }
+    .container {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+      width: 100%;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      backdrop-filter: blur(12px);
+    }
+    h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+    .subtitle {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    p { margin-bottom: 16px; font-size: 14.5px; color: #cbd5e1; }
+    ul { margin-left: 20px; margin-bottom: 16px; font-size: 14.5px; color: #cbd5e1; }
+    li { margin-bottom: 8px; }
+    .footer {
+      background: #06090e;
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+    @media (max-width: 768px) {
+      .navbar { flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .card { padding: 24px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-dot"></span> Pharmacom Labs
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="verificacao-de-autenticidade.html" class="nav-link">Verificar Código</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="controle-de-qualidade.html" class="nav-link">Qualidade</a>
+      <a href="sobre-a-pharmacom.html" class="nav-link">Sobre</a>
+      <a href="contato.html" class="nav-link">Contato</a>
+      <button class="btn-portal" onclick="goToOfficial()">Portal Oficial &rarr;</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <h1>Política de Privacidade</h1>
+      <p class="subtitle">Última atualização: Agosto de 2026</p>
+
+      <p>A Pharmacom Labs respeita a sua privacidade e está comprometida em proteger os dados pessoais de seus usuários em conformidade com as melhores práticas de segurança da informação e a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+
+      <h2>1. Informações Coletadas</h2>
+      <p>Durante a sua navegação em nossos canais, podemos coletar informações técnicas anônimas para garantia de desempenho, estabilidade e análise de métricas, tais como:</p>
+      <ul>
+        <li>Endereço IP e localização geográfica aproximada;</li>
+        <li>Tipo de navegador, sistema operacional e resolução de tela;</li>
+        <li>Parâmetros de campanha e URLs de origem para fins estatísticos (Google Analytics / Google Ads);</li>
+        <li>Páginas visitadas e tempo de permanência.</li>
+      </ul>
+
+      <h2>2. Uso de Cookies e Tecnologias de Rastreamento</h2>
+      <p>Utilizamos cookies essenciais e analíticos para aprimorar a sua experiência de navegação, mensurar a eficiência de campanhas publicitárias e garantir o correto direcionamento para os canais de atendimento e verificação de produtos.</p>
+
+      <h2>3. Finalidade do Tratamento de Dados</h2>
+      <p>Os dados coletados têm como finalidade exclusiva:</p>
+      <ul>
+        <li>Garantir a integridade, segurança e prevenção a fraudes em nossos sistemas;</li>
+        <li>Apresentar conteúdos e canais de validação de autenticidade relevantes;</li>
+        <li>Otimizar o carregamento e a usabilidade em dispositivos móveis e desktops.</li>
+      </ul>
+
+      <h2>4. Compartilhamento Seguro</h2>
+      <p>A Pharmacom Labs não comercializa dados pessoais sob nenhuma circunstância. O compartilhamento ocorre estritamente com provedores de infraestrutura de nuvem e ferramentas de métricas seguras (como Google Tag Manager), que adotam protocolos rígidos de criptografia.</p>
+
+      <h2>5. Seus Direitos</h2>
+      <p>Você tem o direito de solicitar esclarecimentos sobre o tratamento dos seus dados, bem como requerer a exclusão de históricos de navegação através dos canais de suporte no portal oficial.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Início</a> •
+      <a href="verificacao-de-autenticidade.html">Verificar Código</a> •
+      <a href="faq.html">FAQ</a> •
+      <a href="controle-de-qualidade.html">Controle de Qualidade</a> •
+      <a href="sobre-a-pharmacom.html">Sobre Nós</a> •
+      <a href="contato.html">Contato</a> •
+      <a href="politica-de-privacidade.html">Privacidade</a> •
+      <a href="termos-de-uso.html">Termos</a>
+    </div>
+    <p>&copy; 2026 Pharmacom Labs. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function goToOfficial() {
+      var targetBase = 'https://pharmacomoficial.com/';
+      var query = window.location.search;
+      var finalUrl = targetBase;
+      if (query) {
+        var clean = query.startsWith('?') ? query.substring(1) : query;
+        finalUrl = targetBase + (targetBase.indexOf('?') !== -1 ? '&' : '?') + clean;
+      }
+      window.location.href = finalUrl;
+    }
+  </script>
+</body>
+</html>
