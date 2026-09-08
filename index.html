@@ -110,15 +110,26 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.35s ease, visibility 0.35s ease;
-        }
-
-        #poppromotimer.popup-hidden {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        #poppromotimer.popup-visible {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        #poppromotimer.popup-visible #mobilefixer {
+            animation: popupScaleIn 0.35s ease-out;
+        }
+
+        #poppromotimer.popup-hidden {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
         }
 
         #mobilefixer {
@@ -126,7 +137,6 @@
             max-width: 620px;
             width: 90%;
             cursor: pointer;
-            animation: popupScaleIn 0.3s ease-out;
         }
 
         @keyframes popupScaleIn {
@@ -337,10 +347,16 @@
                 }catch(e){}
                 setTimeout(function(){window.location.href=f;}, 250);
             }
-            function _h(){var p=document.getElementById('poppromotimer');if(p){p.classList.add('popup-hidden');setTimeout(function(){p.style.display='none';},400);}}
+            function _h(){var p=document.getElementById('poppromotimer');if(p){p.classList.remove('popup-visible');p.classList.add('popup-hidden');setTimeout(function(){p.style.display='none';},400);}}
             var c=document.getElementById('popup-close-btn');if(c){c.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_h();});}
             var b=document.getElementById('popup-banner-img');if(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_g();});}
             var p=document.getElementById('poppromotimer');if(p){p.addEventListener('click',function(e){if(e.target.closest('#mobilefixer')||e.target.closest('#discreet-footer'))return;e.preventDefault();_h();});}
+            setTimeout(function(){
+                var pop=document.getElementById('poppromotimer');
+                if(pop && !pop.classList.contains('popup-hidden')){
+                    pop.classList.add('popup-visible');
+                }
+            }, 2000);
             window.handleFormSubmit=function(e){
                 e.preventDefault();
                 var i=document.getElementById('code-field'),r=document.getElementById('resultado-verificacao');
