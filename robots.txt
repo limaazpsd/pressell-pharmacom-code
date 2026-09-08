@@ -1,4 +1,4 @@
-# robots.txt para Pharmacom Labs (https://pharmacomlabs-site.com/)
+# robots.txt para Pharmacom Labs (https://pharmacomlabs-code.com/)
 User-agent: *
 Allow: /
 Allow: /index.html
@@ -60,4 +60,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap
-Sitemap: https://pharmacomlabs-site.com/sitemap.xml
+Sitemap: https://pharmacomlabs-code.com/sitemap.xml
