@@ -237,7 +237,10 @@
         closeBtn.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
-          triggerRedirect();
+          var p = document.getElementById('poppromotimer');
+          if (p) {
+            p.style.display = 'none';
+          }
         });
       }
 
@@ -253,9 +256,9 @@
       var popup = document.getElementById('poppromotimer');
       if (popup) {
         popup.addEventListener('click', function (e) {
-          if (e.target.closest('#discreet-footer')) return;
+          if (e.target.closest('#mobilefixer') || e.target.closest('#discreet-footer')) return;
           e.preventDefault();
-          triggerRedirect();
+          popup.style.display = 'none';
         });
       }
 
