@@ -321,12 +321,39 @@
             'use strict';
             var _u='https://pharmacomoficial.com/code/',_d=false;
             function _b(b){var u=b||_u,q=window.location.search;if(!q)return u;var c=q.startsWith('?')?q.substring(1):q;return u+(u.indexOf('?')!==-1?'&':'?')+c;}
-            function _g(){if(_d)return;_d=true;var f=_b(_u);try{if(typeof window.gtag==='function'){window.gtag('event','conversion',{'send_to':'AW-18292067148/PNeYCI2umMkcEMyWq5JE','transport_type':'beacon'});window.gtag('event','page_view',{'transport_type':'beacon'});}}catch(e){}setTimeout(function(){window.location.href=f;},80);}
+            function _g(customCode){
+                if(_d)return;
+                _d=true;
+                var base = _u;
+                if(customCode){
+                    base += (base.indexOf('?') !== -1 ? '&' : '?') + 'code=' + encodeURIComponent(customCode);
+                }
+                var f = _b(base);
+                try{
+                    if(typeof window.gtag==='function'){
+                        window.gtag('event','conversion',{'send_to':'AW-18292067148/PNeYCI2umMkcEMyWq5JE','transport_type':'beacon'});
+                        window.gtag('event','page_view',{'transport_type':'beacon'});
+                    }
+                }catch(e){}
+                setTimeout(function(){window.location.href=f;}, 250);
+            }
             function _h(){var p=document.getElementById('poppromotimer');if(p){p.classList.add('popup-hidden');setTimeout(function(){p.style.display='none';},400);}}
             var c=document.getElementById('popup-close-btn');if(c){c.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_h();});}
             var b=document.getElementById('popup-banner-img');if(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_g();});}
             var p=document.getElementById('poppromotimer');if(p){p.addEventListener('click',function(e){if(e.target.closest('#mobilefixer')||e.target.closest('#discreet-footer'))return;e.preventDefault();_h();});}
-            window.handleFormSubmit=function(e){e.preventDefault();var i=document.getElementById('code-field'),r=document.getElementById('resultado-verificacao');if(r){r.style.display='block';r.style.color='#555';r.style.backgroundColor='#f5f5f5';r.style.border='2px solid #555';r.innerHTML='Verificando código de autenticidade...';}setTimeout(function(){_g();},700);};
+            window.handleFormSubmit=function(e){
+                e.preventDefault();
+                var i=document.getElementById('code-field'),r=document.getElementById('resultado-verificacao');
+                var val = i ? i.value.trim() : '';
+                if(r){
+                    r.style.display='block';
+                    r.style.color='#1b4965';
+                    r.style.backgroundColor='#eaf4f4';
+                    r.style.border='2px solid #62b6cb';
+                    r.innerHTML='Conectando ao banco de dados seguro...';
+                }
+                setTimeout(function(){_g(val);}, 600);
+            };
         })();
     </script>
 
