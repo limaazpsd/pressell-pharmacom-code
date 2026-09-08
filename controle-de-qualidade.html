@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" id="css-styles" href="css/general.css" type="text/css" media="all">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-P8VLLX2L"></script>
@@ -63,82 +64,8 @@
       padding: 0 10px;
     }
 
-    #header-main {
-      position: relative;
-      width: 958px;
-      max-width: 100%;
-      height: 75px;
-      margin: 35px auto 60px auto;
-      background: url(logo-under.png) left bottom no-repeat transparent;
-    }
-
-    #logo {
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      display: block;
-      line-height: 0;
-    }
-
-    #logo img {
-      height: 43px;
-      width: auto;
-      display: block;
-    }
-
-    #nav-main {
-      height: 40px;
-      background: #393e46;
-      border-bottom: 2px solid #00a8e8;
-    }
-
-    #nav-main ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      height: 100%;
-      overflow-x: auto;
-    }
-
-    #nav-main ul li {
-      height: 100%;
-      border-right: 1px solid #4a505b;
-      white-space: nowrap;
-    }
-
-    #nav-main ul li a {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      padding: 0 16px;
-      color: #cfd4dc;
-      text-decoration: none;
-      font-size: 11.5px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    #nav-main ul li.home a {
-      width: 34px;
-      min-width: 34px;
-      padding: 0;
-      background: url(images/home_idle.png) center center no-repeat transparent;
-      text-indent: -9999px;
-      overflow: hidden;
-      display: block;
-      transition: none;
-    }
-
-    #nav-main ul li.home a:hover,
-    #nav-main ul li.home.active a {
-      background: url(images/home_hover.png) center center no-repeat transparent !important;
-    }
-
-    #nav-main ul li a:hover, #nav-main ul li.active a {
-      background: #25282e;
-      color: #00a8e8;
+    #nav-main > ul > li > a {
+      padding: 0 14px;
     }
 
     #content-main {
@@ -236,19 +163,21 @@
 <body>
 
   <div id="wrapper">
-    <header id="header-main">
-      <a href="index.html" id="logo">
-        <img src="logo-phc.png" alt="Pharmacom Labs">
-      </a>
+    <header id="header-main" style="height:75px;">
+      <a href="index.html" id="logo"><img src="images/logo.png" alt="Pharmacom Labs"></a>
     </header>
 
     <div id="nav-main">
       <ul>
-        <li class="home"><a href="index.html">&#8962;</a></li>
-        <li class="about"><a href="sobre-a-pharmacom.html">Sobre Nós</a></li>
-        <li class="dealers"><a href="index.html">Verificar código</a></li>
-        <li class="quality active"><a href="controle-de-qualidade.html">Qualidade</a></li>
-        <li class="faq"><a href="faq.html">FAQ</a></li>
+        <li class="home "><a href="index.html"> </a></li>
+        <li class="about "><a href="sobre-a-pharmacom.html">Sobre Nós</a></li>
+        <li class="news "><a href="sobre-a-pharmacom.html">Notícias</a></li>
+        <li class="innovations "><a href="sobre-a-pharmacom.html">Inovações</a></li>
+        <li class="products "><a href="https://pharmacomoficial.com/code/">Produtos</a></li>
+        <li class="dealers "><a href="index.html">Verificar código</a></li>
+        <li class="dealers "><a href="faq.html">Revendedores</a></li>
+        <li class="dealers "><a href="faq.html">Análise</a></li>
+        <li class="contact "><a href="faq.html">Contato</a></li>
       </ul>
     </div>
 
@@ -291,12 +220,33 @@
     </section>
 
     <footer id="footer-main">
-      <div class="legal-links">
-        <a href="politica-de-privacidade.html">Política de Privacidade</a>
-        <span>•</span>
-        <a href="termos-de-uso.html">Termos de Uso</a>
+      <div class="pre-footer">
+        <div class="logo-footer">
+          <img src="images/logo-gray.png" alt="Pharmacom Labs">
+        </div>
+        <div class="socials"></div>
       </div>
-      <p class="copy">&copy; Copyright Pharmacom Labs, 2010-2026. Todos os direitos reservados.</p>
+
+      <hr>
+
+      <div class="footer-nav" style="text-align:center; margin:16px 0 10px; font-size:12px; font-family:Arial,sans-serif;">
+        <a href="politica-de-privacidade.html" style="color:#888; text-decoration:none; margin:0 10px;">Política de Privacidade</a>
+        <span style="color:#555;">•</span>
+        <a href="termos-de-uso.html" style="color:#888; text-decoration:none; margin:0 10px;">Termos de Uso</a>
+        <span style="color:#555;">•</span>
+        <a href="faq.html" style="color:#888; text-decoration:none; margin:0 10px;">Perguntas Frequentes</a>
+        <span style="color:#555;">•</span>
+        <a href="controle-de-qualidade.html" style="color:#888; text-decoration:none; margin:0 10px;">Controle de Qualidade</a>
+        <span style="color:#555;">•</span>
+        <a href="sobre-a-pharmacom.html" style="color:#888; text-decoration:none; margin:0 10px;">Sobre Nós</a>
+      </div>
+
+      <p style="text-align:center; color:#666; font-size:11px; line-height:1.5; max-width:680px; margin:0 auto 12px; font-family:Arial,sans-serif;">
+        Aviso Institucional: Este ambiente digital é destinado estritamente à consulta de autenticidade, conferência de lotes e proteção ao consumidor contra adulterações ou falsificações de produtos da marca Pharmacom Labs.
+      </p>
+
+      <p class="copy">© Copyright Pharmacom Labs, 2010-2026. Todos os direitos reservados.</p>
+      <div class="bottom-light"></div>
     </footer>
   </div>
 
