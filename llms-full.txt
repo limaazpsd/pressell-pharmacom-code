@@ -23,6 +23,5 @@ A Pharmacom Labs estabeleceu-se como referência em tecnologia laboratorial, sí
 2. FAQ Pharmacom: https://pharmacomlabs-code.com/faq.html
 3. Controle de Qualidade: https://pharmacomlabs-code.com/controle-de-qualidade.html
 4. Sobre a Pharmacom Labs: https://pharmacomlabs-code.com/sobre-a-pharmacom.html
-5. Sobre Nós: https://pharmacomlabs-code.com/sobre-nos
-6. Privacidade & LGPD: https://pharmacomlabs-code.com/politica-de-privacidade.html
-7. Termos de Uso: https://pharmacomlabs-code.com/termos-de-uso.html
+5. Privacidade & LGPD: https://pharmacomlabs-code.com/politica-de-privacidade.html
+6. Termos de Uso: https://pharmacomlabs-code.com/termos-de-uso.html

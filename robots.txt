@@ -2,7 +2,6 @@
 User-agent: *
 Allow: /
 Allow: /index.html
-Allow: /sobre-nos
 Allow: /verificacao-de-autenticidade.html
 Allow: /faq.html
 Allow: /controle-de-qualidade.html
