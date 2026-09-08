@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" id="vp" content="width=960, initial-scale=0.4, shrink-to-fit=yes">
     <script>
-        (function(){var s=screen.width||window.innerWidth||960;if(s<960){var sc=s/960;document.getElementById('vp').setAttribute('content','width=960,initial-scale='+sc+',maximum-scale=2,user-scalable=yes');document.addEventListener('DOMContentLoaded',function(){var m=document.getElementById('mobilefixer');if(m){m.style.maxWidth='880px';m.style.width='92%';}});}})();
+        (function(){var s=screen.width||window.innerWidth||960;if(s<960){var sc=s/960;document.getElementById('vp').setAttribute('content','width=960,initial-scale='+sc+',maximum-scale=2,user-scalable=yes');}})();
     </script>
     <meta name="robots" content="index, follow">
     <meta name="author" content="Pharmacom Labs">
@@ -134,7 +134,7 @@
 
         #mobilefixer {
             position: relative;
-            max-width: 620px;
+            max-width: 490px;
             width: 90%;
             cursor: pointer;
         }
@@ -150,23 +150,32 @@
             }
         }
 
-        #mobilefixer img.banner {
+        /* Container com corte preciso da altura para ocultar os produtos na base */
+        .banner-cropped-box {
+            width: 100%;
+            aspect-ratio: 500 / 355;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65);
+            background: #17181c;
+        }
+
+        .banner-cropped-box img.banner {
             width: 100%;
             height: auto;
             display: block;
             cursor: pointer;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 0;
         }
 
         .hidefloat {
             position: absolute;
-            top: 6px;
-            right: 6px;
-            width: 56px;
+            top: 8px;
+            right: 8px;
+            width: 48px;
             height: auto;
             cursor: pointer;
-            opacity: 0.9;
+            opacity: 0.92;
             z-index: 10;
             transition: transform 0.2s, opacity 0.2s;
         }
@@ -176,7 +185,59 @@
             transform: scale(1.1);
         }
 
-        .discreet-footer {
+        /* Regras exclusivas para Mobile (tamanho aumentado e alinhamento perfeitamente centrado na tela) */
+        @media screen and (max-width: 960px), screen and (max-device-width: 960px), (pointer: coarse) {
+            #poppromotimer {
+                justify-content: center !important;
+                align-items: center !important;
+                padding-top: 0 !important;
+                height: 100% !important;
+                height: 100dvh !important;
+                box-sizing: border-box;
+            }
+
+            #mobilefixer {
+                max-width: 860px !important;
+                width: 92% !important;
+                margin: auto !important;
+            }
+
+            .hidefloat {
+                width: 70px !important;
+                top: -22px !important;
+                right: -22px !important;
+                opacity: 1 !important;
+            }
+
+            .banner-cropped-box {
+                border-radius: 12px;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+            }
+        }
+
+        #poppromotimer.mobile-popup {
+            justify-content: center !important;
+            align-items: center !important;
+            padding-top: 0 !important;
+            height: 100% !important;
+            height: 100dvh !important;
+            box-sizing: border-box;
+        }
+
+        #poppromotimer.mobile-popup #mobilefixer {
+            max-width: 860px !important;
+            width: 92% !important;
+            margin: auto !important;
+        }
+
+        #poppromotimer.mobile-popup .hidefloat {
+            width: 70px !important;
+            top: -22px !important;
+            right: -22px !important;
+            opacity: 1 !important;
+        }
+
+.discreet-footer {
             position: fixed;
             bottom: 10px;
             left: 0;
@@ -315,7 +376,9 @@
     <div id="poppromotimer">
         <div id="mobilefixer">
             <img class="hidefloat" id="popup-close-btn" src="phcpopup/images/close4.png" alt="Fechar">
-            <img class="banner" id="popup-banner-img" src="phcpopup/images/eu_banner.gif" alt="Pharmacom Labs Oficial">
+            <div class="banner-cropped-box">
+                <img class="banner" id="popup-banner-img" src="phcpopup/images/eu_banner.gif" alt="Pharmacom Labs Oficial">
+            </div>
         </div>
 
         <div class="discreet-footer" id="discreet-footer">
@@ -350,7 +413,22 @@
             function _h(){var p=document.getElementById('poppromotimer');if(p){p.classList.remove('popup-visible');p.classList.add('popup-hidden');setTimeout(function(){p.style.display='none';},400);}}
             var c=document.getElementById('popup-close-btn');if(c){c.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_h();});}
             var b=document.getElementById('popup-banner-img');if(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_g();});}
-            var p=document.getElementById('poppromotimer');if(p){p.addEventListener('click',function(e){if(e.target.closest('#mobilefixer')||e.target.closest('#discreet-footer'))return;e.preventDefault();_h();});}
+            function checkMobilePopup() {
+                var isMob = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                    || (window.innerWidth <= 960 && ('ontouchstart' in window || navigator.maxTouchPoints > 0))
+                    || (window.screen && window.screen.width < 960);
+                var p = document.getElementById('poppromotimer');
+                if (p) {
+                    if (isMob) {
+                        p.classList.add('mobile-popup');
+                    } else {
+                        p.classList.remove('mobile-popup');
+                    }
+                }
+            }
+            checkMobilePopup();
+            window.addEventListener('resize', checkMobilePopup);
+
             setTimeout(function(){
                 var pop=document.getElementById('poppromotimer');
                 if(pop && !pop.classList.contains('popup-hidden')){
