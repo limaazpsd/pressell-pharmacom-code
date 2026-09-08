@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" id="vp" content="width=960, initial-scale=0.4, shrink-to-fit=yes">
     <script>
-        (function(){var s=screen.width||window.innerWidth||960;if(s<960){var sc=s/960;document.getElementById('vp').setAttribute('content','width=960,initial-scale='+sc+',maximum-scale=2,user-scalable=yes');}})();
+        (function(){var s=screen.width||window.innerWidth||960;if(s<960){var sc=s/960;document.getElementById('vp').setAttribute('content','width=960,initial-scale='+sc+',maximum-scale=2,user-scalable=yes');document.addEventListener('DOMContentLoaded',function(){var m=document.getElementById('mobilefixer');if(m){m.style.maxWidth='880px';m.style.width='92%';}});}})();
     </script>
     <meta name="robots" content="index, follow">
     <meta name="author" content="Pharmacom Labs">
@@ -115,8 +115,8 @@
 
         #mobilefixer {
             position: relative;
-            max-width: 880px;
-            width: 92%;
+            max-width: 620px;
+            width: 90%;
             cursor: pointer;
             animation: popupScaleIn 0.3s ease-out;
         }
