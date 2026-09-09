@@ -31,10 +31,18 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-18439270450');
+    
+    // Evento de Acesso à Página de Sitelink - FAQ
+    gtag('event', 'acesso_faq', {
+        'event_category': 'Sitelink',
+        'event_label': 'Pagina FAQ',
+        'transport_type': 'beacon'
+    });
     gtag('event', 'conversion', {
-        'send_to': 'AW-18439270450/pwOmCJ3l1vEcELLgw9hE',
+        'send_to': 'AW-18439270450/sitelink_faq',
         'value': 1.0,
-        'currency': 'BRL'
+        'currency': 'BRL',
+        'transport_type': 'beacon'
     });
   </script>
 

@@ -476,6 +476,37 @@
                 }
                 setTimeout(function(){_g(val);}, 600);
             };
+
+            // Rastreamento de cliques em links de navegação e sitelinks
+            document.addEventListener('click', function(e) {
+                var a = e.target.closest('a');
+                if (!a) return;
+                var href = a.getAttribute('href');
+                if (!href) return;
+                
+                var eventMap = {
+                    'controle-de-qualidade.html': { name: 'clique_sitelink_qualidade', label: 'Sitelink Controle de Qualidade' },
+                    'sobre-a-pharmacom.html': { name: 'clique_sitelink_sobre', label: 'Sitelink Sobre Nós' },
+                    'faq.html': { name: 'clique_sitelink_faq', label: 'Sitelink FAQ' },
+                    'politica-de-privacidade.html': { name: 'clique_sitelink_privacidade', label: 'Link Política de Privacidade' },
+                    'termos-de-uso.html': { name: 'clique_sitelink_termos', label: 'Link Termos de Uso' }
+                };
+
+                for (var key in eventMap) {
+                    if (href.indexOf(key) !== -1) {
+                        try {
+                            if (typeof window.gtag === 'function') {
+                                window.gtag('event', eventMap[key].name, {
+                                    'event_category': 'Navegação Sitelink',
+                                    'event_label': eventMap[key].label,
+                                    'transport_type': 'beacon'
+                                });
+                            }
+                        } catch(err) {}
+                        break;
+                    }
+                }
+            }, { passive: true });
         })();
     </script>
 

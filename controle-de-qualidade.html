@@ -31,10 +31,18 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-18439270450');
+    
+    // Evento de Acesso à Página de Sitelink - Controle de Qualidade
+    gtag('event', 'acesso_controle_qualidade', {
+        'event_category': 'Sitelink',
+        'event_label': 'Pagina Controle de Qualidade',
+        'transport_type': 'beacon'
+    });
     gtag('event', 'conversion', {
-        'send_to': 'AW-18439270450/pwOmCJ3l1vEcELLgw9hE',
+        'send_to': 'AW-18439270450/sitelink_qualidade',
         'value': 1.0,
-        'currency': 'BRL'
+        'currency': 'BRL',
+        'transport_type': 'beacon'
     });
   </script>
 
