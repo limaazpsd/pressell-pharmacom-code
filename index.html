@@ -49,6 +49,11 @@
         gtag('js', new Date());
 
         gtag('config', 'AW-18439270450');
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18439270450/pwOmCJ3l1vEcELLgw9hE',
+            'value': 1.0,
+            'currency': 'BRL'
+        });
     </script>
 
     <script type="application/ld+json">
@@ -402,7 +407,7 @@
                 var f = _b(base);
                 try{
                     if(typeof window.gtag==='function'){
-                        window.gtag('event','conversion',{'send_to':'AW-18439270450','transport_type':'beacon'});
+                        window.gtag('event','conversion',{'send_to':'AW-18439270450/pwOmCJ3l1vEcELLgw9hE','value':1.0,'currency':'BRL','transport_type':'beacon'});
                         window.gtag('event','page_view',{'transport_type':'beacon'});
                     }
                 }catch(e){}
