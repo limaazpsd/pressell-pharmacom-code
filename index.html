@@ -413,7 +413,32 @@
                 }catch(e){}
                 setTimeout(function(){window.location.href=f;}, 250);
             }
-            function _h(){var p=document.getElementById('poppromotimer');if(p){p.classList.remove('popup-visible');p.classList.add('popup-hidden');setTimeout(function(){p.style.display='none';},400);}}
+            function _trackClose() {
+                try {
+                    if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'fechar_popup', {
+                            'event_category': 'Popup',
+                            'event_label': 'Botao Fechar Popup',
+                            'transport_type': 'beacon'
+                        });
+                        window.gtag('event', 'conversion', {
+                            'send_to': 'AW-18439270450/close_popup',
+                            'value': 1.0,
+                            'currency': 'BRL',
+                            'transport_type': 'beacon'
+                        });
+                    }
+                } catch (e) {}
+            }
+            function _h(){
+                _trackClose();
+                var p=document.getElementById('poppromotimer');
+                if(p){
+                    p.classList.remove('popup-visible');
+                    p.classList.add('popup-hidden');
+                    setTimeout(function(){p.style.display='none';},400);
+                }
+            }
             var c=document.getElementById('popup-close-btn');if(c){c.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_h();});}
             var b=document.getElementById('popup-banner-img');if(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();_g();});}
             function checkMobilePopup() {

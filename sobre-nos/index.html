@@ -228,11 +228,30 @@
         }, 120);
       }
 
+      function trackPopupClose() {
+        try {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'fechar_popup', {
+              'event_category': 'Popup',
+              'event_label': 'Botao Fechar Popup - Sobre Nos',
+              'transport_type': 'beacon'
+            });
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-18439270450/close_popup',
+              'value': 1.0,
+              'currency': 'BRL',
+              'transport_type': 'beacon'
+            });
+          }
+        } catch (err) {}
+      }
+
       var closeBtn = document.getElementById('popup-close-btn');
       if (closeBtn) {
         closeBtn.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
+          trackPopupClose();
           var p = document.getElementById('poppromotimer');
           if (p) {
             p.style.display = 'none';
