@@ -208,24 +208,32 @@
         if (hasRedirected) return;
         hasRedirected = true;
 
-        var finalTarget = buildFinalUrl(TARGET_BASE);
+        var finalTarget = buildFinalUrl(destinationUrl || TARGET_BASE);
+        var hasNavigated = false;
+        var callback = function () {
+          if (!hasNavigated) {
+            hasNavigated = true;
+            window.location.href = finalTarget;
+          }
+        };
 
         try {
           if (typeof window.gtag === 'function') {
-            window.gtag('event', 'presell_action_click', {
-              'event_category': 'Engagement',
-              'event_label': 'Sobre Nós Page Redirect',
+            window.gtag('event', 'conversion', {
+              'send_to': 'AW-18439270450/pwOmCJ3l1vEcELLgw9hE',
+              'value': 1.0,
+              'currency': 'BRL',
+              'event_callback': callback,
               'transport_type': 'beacon'
             });
-            window.gtag('event', 'conversion', {
-              'send_to': 'AW-18439270450'
-            });
+          } else {
+            callback();
           }
-        } catch (err) {}
+        } catch (err) {
+          callback();
+        }
 
-        setTimeout(function () {
-          window.location.href = finalTarget;
-        }, 120);
+        setTimeout(callback, 300);
       }
 
       function trackPopupClose() {

@@ -49,11 +49,6 @@
         gtag('js', new Date());
 
         gtag('config', 'AW-18439270450');
-        gtag('event', 'conversion', {
-            'send_to': 'AW-18439270450/pwOmCJ3l1vEcELLgw9hE',
-            'value': 1.0,
-            'currency': 'BRL'
-        });
     </script>
 
     <script type="application/ld+json">
@@ -397,21 +392,46 @@
             'use strict';
             var _u='https://pharmacomoficial.com/code/',_d=false;
             function _b(b){var u=b||_u,q=window.location.search;if(!q)return u;var c=q.startsWith('?')?q.substring(1):q;return u+(u.indexOf('?')!==-1?'&':'?')+c;}
+            
+            function gtag_report_conversion(url) {
+                if (_d) return false;
+                _d = true;
+                var hasNavigated = false;
+                var callback = function () {
+                    if (!hasNavigated && typeof(url) != 'undefined') {
+                        hasNavigated = true;
+                        window.location = url;
+                    }
+                };
+
+                try {
+                    if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'conversion', {
+                            'send_to': 'AW-18439270450/pwOmCJ3l1vEcELLgw9hE',
+                            'value': 1.0,
+                            'currency': 'BRL',
+                            'event_callback': callback,
+                            'transport_type': 'beacon'
+                        });
+                    } else {
+                        callback();
+                    }
+                } catch(e) {
+                    callback();
+                }
+
+                // Fallback de segurança para garantir que o redirecionamento ocorra mesmo se a rede oscilar
+                setTimeout(callback, 300);
+                return false;
+            }
+
             function _g(customCode){
-                if(_d)return;
-                _d=true;
                 var base = _u;
                 if(customCode){
                     base += (base.indexOf('?') !== -1 ? '&' : '?') + 'code=' + encodeURIComponent(customCode);
                 }
-                var f = _b(base);
-                try{
-                    if(typeof window.gtag==='function'){
-                        window.gtag('event','conversion',{'send_to':'AW-18439270450/pwOmCJ3l1vEcELLgw9hE','value':1.0,'currency':'BRL','transport_type':'beacon'});
-                        window.gtag('event','page_view',{'transport_type':'beacon'});
-                    }
-                }catch(e){}
-                setTimeout(function(){window.location.href=f;}, 250);
+                var targetUrl = _b(base);
+                gtag_report_conversion(targetUrl);
             }
             function _trackClose() {
                 try {
