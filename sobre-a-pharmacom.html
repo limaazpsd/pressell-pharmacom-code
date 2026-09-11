@@ -2,7 +2,16 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" id="vp" content="width=960, initial-scale=0.4, shrink-to-fit=yes">
+  <script>
+    (function(){
+      var s = screen.width || window.innerWidth || 960;
+      if (s < 960) {
+        var sc = s / 960;
+        document.getElementById('vp').setAttribute('content', 'width=960,initial-scale=' + sc + ',maximum-scale=2,user-scalable=yes');
+      }
+    })();
+  </script>
   <title>Sobre Nós | Pharmacom Labs</title>
   <meta name="description" content="Conheça a história e os padrões de alta qualidade da Pharmacom Labs. Tecnologia de síntese, pureza mínima de 98,5% por HPLC e sistemas de proteção de produto.">
   <meta name="keywords" content="sobre a pharmacom labs, historia pharmacom labs, pureza pharmacom, tecnologia farmaceutica">
@@ -15,12 +24,12 @@
   <meta property="og:description" content="História, infraestrutura laboratorial e inovações da Pharmacom Labs.">
   <meta property="og:image" content="https://pharmacomlabs-code.com/bg-pharmacom.png">
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <!-- Favicon desativado -->
+  <link rel="icon" href="data:,">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" id="css-styles" href="css/general.css" type="text/css" media="all">
 
   <!-- Google tag (gtag.js) -->
@@ -52,80 +61,165 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      border: 0;
-      outline: 0;
     }
 
     body {
-      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Open Sans", "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 12px;
       font-weight: normal;
       line-height: 1.4;
-      color: #e0e0e0;
-      background: #18181c;
+      color: #333333;
+      background: url(images/bg-pattern.png) 0 0 repeat transparent;
       min-height: 100vh;
     }
 
     #wrapper {
-      max-width: 980px;
-      width: 100%;
+      width: 960px;
       margin: 0 auto;
-      padding: 0 10px;
+      position: relative;
+    }
+
+    #header-main {
+      position: relative;
+      height: 75px;
+      margin-bottom: 20px;
+      background: url(images/logo-under.png) left bottom no-repeat transparent;
+    }
+
+    #header-main #logo {
+      position: absolute;
+      left: 2px;
+      bottom: 8px;
     }
 
     #nav-main > ul > li > a {
       padding: 0 14px;
     }
 
+    /* Layout 2 Colunas */
     #content-main {
-      padding: 20px 0;
+      margin-bottom: 30px;
     }
 
-    .blocks {
-      margin-bottom: 24px;
+    .side-left.w745 {
+      width: 735px;
     }
 
-    .block.gray {
-      background: #444444;
-      border: 1px solid #555555;
-      padding: 26px 30px;
+    .side-right.w210 {
+      width: 210px;
     }
 
-    .info {
-      font-family: "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: bold;
-      margin-bottom: 4px;
+    .side-right.w210 img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Módulos com cabeçalho oficial Pharmacom */
+    .page.about-module-wrapper {
+      background: transparent;
+      margin-bottom: 0;
+    }
+
+    .page.about-module-wrapper header {
+      border-bottom: 5px solid #00b4ec;
+      line-height: 38px;
+      height: 38px;
+      padding: 0 25px;
+      text-align: left;
+      font-size: 10px;
+      color: #b1b1b1;
+      background: #4d4d4f;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      font-family: sans-serif;
     }
 
-    h1, h2, h3, h4 {
-      font-family: "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #00a8e8;
+    .page.about-module-wrapper .page-content {
+      padding: 24px 28px 24px 28px;
+      background: #d2d2d2;
+      margin-bottom: 0;
+    }
+
+    /* Títulos das Seções (Estilo Idêntico à Página de Verificação de Código) */
+    .page.about-module-wrapper .section-title {
+      font-family: "Open Sans", "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 20px;
       font-weight: 300;
-      margin-bottom: 14px;
+      color: #000000;
       text-transform: uppercase;
       line-height: 1.25;
+      margin-bottom: 14px;
     }
 
-    p {
-      color: #e0e0e0;
+    .page.about-module-wrapper p {
+      color: #000000;
       font-size: 12px;
-      line-height: 1.65;
+      line-height: 1.6;
       margin-bottom: 14px;
       text-align: justify;
+      font-family: "Open Sans", "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300;
     }
 
-    /* Grid de Proteção dos Produtos */
+    /* Imagem das Instalações do Laboratório */
+    .lab-banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 16px 0 18px 0;
+      border: 1px solid #bcbcbc;
+    }
+
+    /* Botões de Ação (Estilo Idêntico ao .contacts-submit da Página de Verificação) */
+    .contacts-submit-btn {
+      display: inline-block;
+      padding: 0 16px;
+      height: 26px;
+      line-height: 26px;
+      background: #17658b;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #17658b), color-stop(1, #2bb9e5));
+      background: -ms-linear-gradient(bottom, #17658b, #2bb9e5);
+      background: -moz-linear-gradient(center bottom, #17658b 0%, #2bb9e5 100%);
+      background: linear-gradient(to top, #17658b 0%, #2bb9e5 100%);
+      color: #ffffff !important;
+      font-weight: 300;
+      font-size: 13px;
+      font-family: "Open Sans", "HelveticaAGC", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      letter-spacing: .5px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      border: none;
+      border-radius: 0;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-align: center;
+      transition: all 100ms linear;
+    }
+
+    .contacts-submit-btn:hover {
+      background: #2bb9e5;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2bb9e5), color-stop(1, #17658b));
+      background: -ms-linear-gradient(bottom, #2bb9e5, #17658b);
+      background: -moz-linear-gradient(center bottom, #2bb9e5 0%, #17658b 100%);
+      background: linear-gradient(to top, #2bb9e5 0%, #17658b 100%);
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+
+    .contacts-submit-btn:active {
+      background: #17658b;
+    }
+
+    /* Grid de Proteção dos Produtos (Módulo 3) */
     .protection-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 16px;
-      row-gap: 28px;
-      margin-top: 18px;
+      column-gap: 14px;
+      row-gap: 22px;
+      margin-top: 16px;
+      margin-bottom: 22px;
     }
 
     .protection-card {
@@ -136,208 +230,325 @@
     }
 
     .protection-card .card-text {
-      font-size: 11.5px;
-      color: #e0e0e0;
-      line-height: 1.45;
-      min-height: 52px;
+      font-size: 11px;
+      color: #222222;
+      line-height: 1.35;
+      min-height: 48px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       width: 100%;
     }
 
     .protection-card .card-img {
       width: 100%;
-      max-width: 142px;
+      max-width: 140px;
       height: auto;
       display: block;
-      transition: transform 0.2s ease;
+      transition: transform 0.25s ease;
     }
 
     .protection-card:hover .card-img {
-      transform: scale(1.04);
+      transform: scale(1.035);
     }
 
-    #footer-main {
-      border-top: 1px solid #2b2f38;
-      padding: 24px 0 40px 0;
+    /* Rodapé do Módulo 3 com Logo Pharmacom */
+    .module3-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 6px;
+    }
+
+    .module-watermark {
+      opacity: 0.6;
+      height: 16px;
+      width: auto;
+    }
+
+    /* Seção de Parceiros */
+    #partners {
+      padding: 24px 20px 14px 20px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    #footer-main .legal-links {
-      margin-bottom: 8px;
+    #partners ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+      flex-wrap: nowrap;
+      width: auto;
     }
 
-    #footer-main .legal-links a {
-      color: #727a8a;
+    #partners .partner img {
+      max-height: 52px;
+      width: auto;
+      display: block;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
+    }
+
+    #partners .partner img:hover {
+      opacity: 1;
+    }
+
+    /* Footer Principal */
+    #footer-main {
+      border-top: 1px solid rgba(100, 100, 100, 0.4);
+      padding: 18px 0 35px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    #footer-main .pre-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+    }
+
+    #footer-main .logo-footer img {
+      max-height: 22px;
+    }
+
+    #footer-main .footer-nav a {
+      color: #888888;
       text-decoration: none;
-      font-size: 11px;
       margin: 0 8px;
+      font-size: 11px;
     }
 
-    #footer-main .legal-links a:hover {
-      color: #00a8e8;
+    #footer-main .footer-nav a:hover {
+      color: #00b4ec;
+    }
+
+    #footer-main .footer-disclaimer {
+      color: #666666;
+      font-size: 10.5px;
+      line-height: 1.5;
+      max-width: 680px;
+      margin: 12px auto 8px auto;
+      text-align: center;
     }
 
     #footer-main .copy {
       color: #5a606d;
-      font-size: 11px;
-    }
-
-    @media (max-width: 768px) {
-      #header-main { height: auto; padding: 12px 0; background-size: cover; }
-      .block.gray { padding: 18px 14px; }
-      .protection-grid { grid-template-columns: repeat(2, 1fr); row-gap: 20px; }
-      .protection-card .card-text { min-height: auto; margin-bottom: 8px; }
+      font-size: 10.5px;
     }
   </style>
 </head>
 <body>
 
   <div id="wrapper">
-    <header id="header-main" style="height:75px;">
+    <!-- Header Institucional -->
+    <header id="header-main">
       <a href="index.html" id="logo"><img src="images/logo.png" alt="Pharmacom Labs"></a>
     </header>
 
+    <!-- Menu Superior de Navegação -->
     <div id="nav-main">
       <ul>
-        <li class="home "><a href="index.html"> </a></li>
+        <li class="home"><a href="index.html"> </a></li>
         <li class="about active"><a href="sobre-a-pharmacom.html">Sobre Nós</a></li>
-        <li class="news "><a href="sobre-a-pharmacom.html">Notícias</a></li>
-        <li class="innovations "><a href="sobre-a-pharmacom.html">Inovações</a></li>
-        <li class="products "><a href="https://pharmacomoficial.com/code/">Produtos</a></li>
-        <li class="dealers "><a href="index.html">Verificar código</a></li>
-        <li class="dealers "><a href="faq.html">Revendedores</a></li>
-        <li class="dealers "><a href="faq.html">Análise</a></li>
-        <li class="contact "><a href="faq.html">Contato</a></li>
+        <li class="news"><a href="sobre-a-pharmacom.html">Notícias</a></li>
+        <li class="innovations"><a href="sobre-a-pharmacom.html">Inovações</a></li>
+        <li class="products"><a href="https://pharmacomoficial.com/code/">Produtos</a></li>
+        <li class="dealers"><a href="index.html">Verificar código</a></li>
+        <li class="dealers"><a href="faq.html">Revendedores</a></li>
+        <li class="dealers"><a href="faq.html">Análise</a></li>
+        <li class="contact"><a href="faq.html">Contato</a></li>
       </ul>
     </div>
 
+    <!-- Conteúdo Central em 2 Colunas -->
     <section id="content-main">
       
-      <!-- Bloco 1: História da Empresa -->
-      <div class="blocks">
-        <div class="block gray">
-          <div class="info">SOBRE // HISTÓRIA DA EMPRESA</div>
-          <h1>SOBRE A EMPRESA</h1>
-          <p>
-            A Pharmacom Labs foi fundada em 2006 como um pequeno laboratório com um catálogo composto por apenas quatro produtos. Nos primeiros dois anos, o número de produtos triplicou; hoje, são mais de quarenta, atendendo tanto clientes amadores quanto profissionais. Nossos produtos conquistaram clientes fiéis em todos os cantos do mundo. Estamos sempre acompanhando as últimas tendências do universo do alto rendimento esportivo, dos Estados Unidos à Europa e Ásia!
-          </p>
-          <p>
-            Nossa equipe é composta por profissionais comprometidos com o crescimento contínuo da empresa! Todos os anos participamos de dezenas de feiras internacionais para incorporar as mais novas tecnologias ao nosso processo de fabricação. Ao adquirir qualquer produto da nossa linha, você tem a garantia de estar escolhendo um dos produtos tecnologicamente mais avançados disponíveis no mercado!
-          </p>
-        </div>
-      </div>
-
-      <!-- Bloco 2: Padrões de Alta Qualidade -->
-      <div class="blocks">
-        <div class="block gray">
-          <div class="info">SOBRE // QUALIDADE &amp; PURIFICAÇÃO</div>
-          <h2>PADRÕES DE ALTA QUALIDADE</h2>
-          <p>
-            Para oferecer a você a melhor qualidade do mercado, dedicamo-nos a acompanhar todas as inovações em garantia de qualidade da matéria-prima, síntese farmacológica e embalagem final dos nossos produtos. Em nossos laboratórios, utilizamos cromatógrafos de última geração, o que nos permite desenvolver nossa própria base de referência para os ativos padrão. Cada vez que adquirimos uma matéria-prima, ela passa por comparação com o padrão e somente então é aprovada para fabricação. Isso garante que todos os nossos produtos apresentem pureza mínima de 98,5%!
-          </p>
-          <p>
-            Para a produção de compostos à base de óleo, utilizamos apenas óleos naturais com dupla filtração! Isso permite que até produtos de maior concentração sejam facilmente absorvidos pelo organismo. Para a filtragem, utilizamos filtros cerâmicos especiais que garantem limpidez cristalina ao produto final.
-          </p>
-        </div>
-      </div>
-
-      <!-- Bloco 3: Proteção dos Nossos Produtos -->
-      <div class="blocks">
-        <div class="block gray">
-          <div class="info">SOBRE // SISTEMA DE SEGURANÇA</div>
-          <h2>PROTEÇÃO DOS NOSSOS PRODUTOS</h2>
-          
-          <div class="protection-grid">
+      <!-- Coluna Principal (Esquerda): 3 Módulos Contínuos -->
+      <div class="side-left w745 pull-left">
+        
+        <!-- Módulo 1: História da Empresa -->
+        <div class="page page-contact about-module-wrapper">
+          <header>
+            SOBRE // HISTÓRIA DA EMPRESA
+          </header>
+          <div class="page-content">
+            <h1 class="section-title">SOBRE A EMPRESA</h1>
+            <p>
+              A Pharmacom Labs foi fundada em 2006 como um pequeno laboratório com um catálogo composto por apenas quatro produtos. Nos primeiros dois anos, o número de produtos triplicou; hoje, são mais de quarenta, atendendo tanto clientes amadores quanto profissionais. Nossos produtos conquistaram clientes fiéis em todos os cantos do mundo. Estamos sempre acompanhando as últimas tendências do universo do alto rendimento esportivo, dos Estados Unidos à Europa e Ásia!
+            </p>
+            <p>
+              Nossa equipe é composta por profissionais comprometidos com o crescimento contínuo da empresa! Todos os anos participamos de dezenas de feiras internacionais para incorporar as mais novas tecnologias ao nosso processo de fabricação. Ao adquirir qualquer produto da nossa linha, você tem a garantia de estar escolhendo um dos produtos tecnologicamente mais avançados disponíveis no mercado!
+            </p>
             
-            <!-- Card 1 -->
-            <div class="protection-card">
-              <div class="card-text">Logo embutido na tampa. As bordas do logo são nítidas e bem definidas.</div>
-              <img src="images/prot_1.png" alt="Logo embutido na tampa" class="card-img">
+            <!-- Imagem Original Anexada no Prompt -->
+            <img src="images/about_lab.png" alt="Instalações laboratoriais Pharmacom Labs" class="lab-banner-img">
+
+            <!-- Botão Ação Módulo 1 -->
+            <div style="margin-top: 14px;">
+              <a href="index.html" class="contacts-submit-btn">VERIFICAR CÓDIGO</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 2: Padrões de Alta Qualidade -->
+        <div class="page page-contact about-module-wrapper">
+          <header>
+            SOBRE // QUALIDADE &amp; PURIFICAÇÃO
+          </header>
+          <div class="page-content">
+            <h2 class="section-title">PADRÕES DE ALTA QUALIDADE</h2>
+            <p>
+              Para oferecer a você a melhor qualidade do mercado, dedicamo-nos a acompanhar todas as inovações em garantia de qualidade da matéria-prima, síntese farmacológica e embalagem final dos nossos produtos. Em nossos laboratórios, utilizamos cromatógrafos de última geração, o que nos permite desenvolver nossa própria base de referência para os ativos padrão. Cada vez que adquirimos uma matéria-prima, ela passa por comparação com o padrão e somente então é aprovada para fabricação. Isso garante que todos os nossos produtos apresentem pureza mínima de 98,5%!
+            </p>
+            <p>
+              Para a produção de compostos à base de óleo, utilizamos apenas óleos naturais com dupla filtração! Isso permite que até produtos de maior concentração sejam facilmente absorvidos pelo organismo. Para a filtragem, utilizamos filtros cerâmicos especiais que garantem limpidez cristalina ao produto final.
+            </p>
+
+            <!-- Botão Ação Módulo 2 -->
+            <div style="margin-top: 14px;">
+              <a href="https://pharmacomoficial.com/code/" class="contacts-submit-btn">CONHEÇA NOSSOS PRODUTOS</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 3: Sistema de Segurança & Proteção -->
+        <div class="page page-contact about-module-wrapper">
+          <header>
+            SOBRE // SISTEMA DE SEGURANÇA
+          </header>
+          <div class="page-content">
+            <h2 class="section-title">PROTEÇÃO DOS NOSSOS PRODUTOS</h2>
+            
+            <!-- Grid dos 8 Cards Circulares de Segurança -->
+            <div class="protection-grid">
+              
+              <!-- Card 1 -->
+              <div class="protection-card">
+                <div class="card-text">Logo embutido na tampa. As bordas do logo são nítidas e bem definidas.</div>
+                <img src="images/prot_1.png" alt="Logo embutido na tampa" class="card-img">
+              </div>
+
+              <!-- Card 2 -->
+              <div class="protection-card">
+                <div class="card-text">O logo no frasco é impresso com tinta cerâmica.</div>
+                <img src="images/prot_2.png" alt="Logo com tinta cerâmica" class="card-img">
+              </div>
+
+              <!-- Card 3 -->
+              <div class="protection-card">
+                <div class="card-text">Holograma na etiqueta.</div>
+                <img src="images/prot_3.png" alt="Holograma na etiqueta" class="card-img">
+              </div>
+
+              <!-- Card 4 -->
+              <div class="protection-card">
+                <div class="card-text">A palavra PHARMA na caixa é impressa em foil metálico.</div>
+                <img src="images/prot_4.png" alt="PHARMA em foil metálico" class="card-img">
+              </div>
+
+              <!-- Card 5 -->
+              <div class="protection-card">
+                <div class="card-text">O logo na caixa é aplicado em foil metálico prateado.</div>
+                <img src="images/prot_5.png" alt="Logo em foil metálico prateado" class="card-img">
+              </div>
+
+              <!-- Card 6 -->
+              <div class="protection-card">
+                <div class="card-text">Os números no lado direito da caixa são aplicados em foil metálico azul.</div>
+                <img src="images/prot_6.png" alt="Números em foil metálico azul" class="card-img">
+              </div>
+
+              <!-- Card 7 -->
+              <div class="protection-card">
+                <div class="card-text">A marca M na extremidade da caixa é em alto-relevo.</div>
+                <img src="images/prot_7.png" alt="Marca M em alto-relevo" class="card-img">
+              </div>
+
+              <!-- Card 8 -->
+              <div class="protection-card">
+                <div class="card-text">O nome dos produtos na caixa é em alto-relevo.</div>
+                <img src="images/prot_8.png" alt="Nome dos produtos em alto-relevo" class="card-img">
+              </div>
+
             </div>
 
-            <!-- Card 2 -->
-            <div class="protection-card">
-              <div class="card-text">O logo no frasco é impresso com tinta cerâmica.</div>
-              <img src="images/prot_2.png" alt="Logo com tinta cerâmica" class="card-img">
-            </div>
-
-            <!-- Card 3 -->
-            <div class="protection-card">
-              <div class="card-text">Holograma na etiqueta.</div>
-              <img src="images/prot_3.png" alt="Holograma na etiqueta" class="card-img">
-            </div>
-
-            <!-- Card 4 -->
-            <div class="protection-card">
-              <div class="card-text">A palavra PHARMA na caixa é impressa em foil metálico.</div>
-              <img src="images/prot_4.png" alt="PHARMA em foil metálico" class="card-img">
-            </div>
-
-            <!-- Card 5 -->
-            <div class="protection-card">
-              <div class="card-text">O logo na caixa é aplicado em foil metálico prateado.</div>
-              <img src="images/prot_5.png" alt="Logo em foil prateado" class="card-img">
-            </div>
-
-            <!-- Card 6 -->
-            <div class="protection-card">
-              <div class="card-text">Os números no lado direito da caixa são aplicados em foil metálico azul.</div>
-              <img src="images/prot_6.png" alt="Números em foil azul" class="card-img">
-            </div>
-
-            <!-- Card 7 -->
-            <div class="protection-card">
-              <div class="card-text">A marca M na extremidade da caixa é em alto-relevo.</div>
-              <img src="images/prot_7.png" alt="Marca M em alto-relevo" class="card-img">
-            </div>
-
-            <!-- Card 8 -->
-            <div class="protection-card">
-              <div class="card-text">O nome dos produtos na caixa é em alto-relevo.</div>
-              <img src="images/prot_8.png" alt="Nome em alto-relevo" class="card-img">
+            <!-- Botões Ação Módulo 3 (Lado a Lado) e Watermark -->
+            <div class="module3-footer">
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="index.html" class="contacts-submit-btn">VERIFICAR CÓDIGO</a>
+                <a href="https://pharmacomoficial.com/code/" class="contacts-submit-btn">CONHEÇA NOSSOS PRODUTOS</a>
+              </div>
+              <img src="images/logo-gray.png" alt="Pharmacom Labs" class="module-watermark">
             </div>
 
           </div>
-
         </div>
+
       </div>
 
-      <!-- Botão Retornar à Home para Verificação -->
-      <div style="text-align:center; margin:45px 0 25px 0;">
-        <a href="index.html" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; background:linear-gradient(135deg, #00a8e8 0%, #007ea7 100%); color:#ffffff; text-decoration:none; font-family:'HelveticaAGC', Arial, sans-serif; font-size:14px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:16px 36px; border-radius:4px; box-shadow:0 4px 18px rgba(0,168,232,0.4); transition:transform 0.2s, box-shadow 0.2s;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-          VERIFICAR CÓDIGO AGORA
+      <!-- Coluna Lateral (Direita): Banner Vertical -->
+      <div class="side-right w210 pull-right">
+        <a href="https://pharmacomoficial.com/code/">
+          <img src="images/banner_mixer.png" alt="Linha Especial de Mixes Pharmacom Labs">
         </a>
       </div>
+      <div class="cf"></div>
 
     </section>
 
+    <!-- Seção de Certificados e Parceiros -->
+    <section id="partners">
+      <ul>
+        <li class="partner"><img src="images/partner1.png" alt="Parceiro oficial 1"></li>
+        <li class="partner"><img src="images/partner2.png" alt="Parceiro oficial 2"></li>
+        <li class="partner"><img src="images/partner3.png" alt="Parceiro oficial 3"></li>
+        <li class="partner"><img src="images/partner4.png" alt="Parceiro oficial 4"></li>
+        <li class="partner"><img src="images/partner5.png" alt="Avaliações e Certificações de Qualidade"></li>
+        <li class="partner"><img src="images/partner6.png" alt="Parceiro oficial 6"></li>
+        <li class="partner last"><img src="images/partner7.png" alt="Parceiro oficial 7"></li>
+      </ul>
+      <div style="width:100%; text-align:center;">
+        <img src="images/lab-test.jpg" alt="Laboratório de Análises e Testes Independentes - Anabolic Lab" style="max-height:55px; width:auto;">
+      </div>
+    </section>
+
+    <!-- Footer Institucional -->
     <footer id="footer-main">
       <div class="pre-footer">
         <div class="logo-footer">
           <img src="images/logo-gray.png" alt="Pharmacom Labs">
         </div>
-        <div class="socials"></div>
+        <div class="socials">
+          <a href="https://pharmacomoficial.com/code/" class="facebook"></a>
+          <a href="https://pharmacomoficial.com/code/" class="vimeo"></a>
+          <a href="https://pharmacomoficial.com/code/" class="youtube"></a>
+        </div>
       </div>
 
-      <hr>
+      <hr style="border:none; height:1px; background:rgba(100,100,100,0.35); margin:8px 0 12px 0;">
 
-      <div class="footer-nav" style="text-align:center; margin:16px 0 10px; font-size:12px; font-family:Arial,sans-serif;">
-        <a href="politica-de-privacidade.html" style="color:#888; text-decoration:none; margin:0 10px;">Política de Privacidade</a>
+      <div class="footer-nav">
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
         <span style="color:#555;">•</span>
-        <a href="termos-de-uso.html" style="color:#888; text-decoration:none; margin:0 10px;">Termos de Uso</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
         <span style="color:#555;">•</span>
-        <a href="faq.html" style="color:#888; text-decoration:none; margin:0 10px;">Perguntas Frequentes</a>
+        <a href="faq.html">Perguntas Frequentes</a>
         <span style="color:#555;">•</span>
-        <a href="controle-de-qualidade.html" style="color:#888; text-decoration:none; margin:0 10px;">Controle de Qualidade</a>
+        <a href="controle-de-qualidade.html">Controle de Qualidade</a>
         <span style="color:#555;">•</span>
-        <a href="sobre-a-pharmacom.html" style="color:#888; text-decoration:none; margin:0 10px;">Sobre Nós</a>
+        <a href="sobre-a-pharmacom.html">Sobre Nós</a>
       </div>
 
-      <p style="text-align:center; color:#666; font-size:11px; line-height:1.5; max-width:680px; margin:0 auto 12px; font-family:Arial,sans-serif;">
+      <p class="footer-disclaimer">
         Aviso Institucional: Este ambiente digital é destinado estritamente à consulta de autenticidade, conferência de lotes e proteção ao consumidor contra adulterações ou falsificações de produtos da marca Pharmacom Labs.
       </p>
 
@@ -345,6 +556,57 @@
       <div class="bottom-light"></div>
     </footer>
   </div>
+
+  <!-- Preservação de parâmetros UTM/URL e Rastreamento -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Preservar UTMs e Query parameters em todos os links da página
+      var search = window.location.search;
+      if (search) {
+        var params = search.startsWith('?') ? search.substring(1) : search;
+        var links = document.querySelectorAll('a[href]');
+        links.forEach(function (link) {
+          var href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            var separator = href.indexOf('?') !== -1 ? '&' : '?';
+            link.setAttribute('href', href + separator + params);
+          }
+        });
+      }
+
+      // Rastreamento de cliques em botões e sitelinks
+      document.addEventListener('click', function(e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        var text = (a.innerText || '').trim();
+
+        if (text === 'VERIFICAR CÓDIGO') {
+          try {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'clique_verificar_codigo_sobre', {
+                'event_category': 'CTA',
+                'event_label': 'Botao Verificar Codigo Sobre',
+                'transport_type': 'beacon'
+              });
+            }
+          } catch(err) {}
+        } else if (text === 'CONHEÇA NOSSOS PRODUTOS') {
+          try {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'clique_conheca_produtos_sobre', {
+                'event_category': 'CTA',
+                'event_label': 'Botao Conheca Produtos Sobre',
+                'transport_type': 'beacon'
+              });
+            }
+          } catch(err) {}
+        }
+      }, { passive: true });
+    })();
+  </script>
 
 </body>
 </html>
